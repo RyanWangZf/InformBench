@@ -1,17 +1,16 @@
 import os
-import pdb
 from benchmark_datasets.data_loader import load_informbench_benchmark_data
 from benchmark.rag_agent import RAGAgent
-from benchmark.vectordb import create_vector_db, create_retriever_tool_node
+from benchmark.vectordb import create_vector_db, create_custom_retriever_tool
 from langchain_core.documents import Document
 from langchain_core.messages import AIMessage
 from dotenv import load_dotenv
 
 # load the environment variables for calling azure openai
-load_dotenv()
+load_dotenv("/home/zifengw2/github/InformBench/.env")
 
 # Configuration
-DATA_PATH = "./benchmark_datasets/data"
+DATA_PATH = "/home/zifengw2/github/InformBench/benchmark_datasets/data"
 TARGET_NCTID = "NCT02788201"
 TARGET_SECTIONS = ["Purpose of Research", "Duration of Study Involvement"]
 
@@ -38,10 +37,10 @@ def main():
     # 3. Extract protocol documents
     protocol_docs = target_trial["protocol"]
     
-    # 4. Create vector database and retriever tool
+    # 4. Create vector database and custom retriever tool
     print("Creating vector database...")
     vectordb = create_vector_db(protocol_docs)
-    retriever_tool = create_retriever_tool_node(vectordb)
+    retriever_tool = create_custom_retriever_tool(vectordb)
     
     # 5. Initialize the RAG agent
     print("Initializing RAG agent...")

@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import List, Annotated, Sequence, TypeVar, cast
 from langgraph.graph import Graph, StateGraph, END
 from langgraph.graph.message import add_messages, BaseMessage
-from langchain.tools import BaseTool
+from langchain.tools import BaseTool, Tool
 from langchain.prompts import PromptTemplate
 from langgraph.utils.runnable import RunnableCallable
 from langchain_core.messages import AIMessage, BaseMessage, SystemMessage, HumanMessage
@@ -13,7 +13,6 @@ import asyncio
 from functools import partial
 
 from .base_agent import BaseAgent, AgentState, cut_off_tokens
-from .vectordb import create_retriever_tool_node
 
 # Define prompts outside the class to be reusable
 KEYWORD_GENERATION_PROMPT = PromptTemplate.from_template(
@@ -47,6 +46,7 @@ CONTENT_GENERATION_PROMPT = PromptTemplate.from_template(
     3. Be comprehensive but concise
     4. Follow typical ICF formatting and structure for this type of section
     5. Focus only on information relevant to the specified section
+    6. Cite the documents inline with the content, in the format of [[citation:<document_index>]].
     
     Write the complete ICF section content:"""
 )
@@ -135,13 +135,20 @@ class RAGAgent(BaseAgent):
             for section in target_sections:
                 keywords = section_keywords[section]
                 
-                # Use retriever tool to get documents
-                retrieved_docs = self.retriever_tool.invoke({"query": keywords, "k": 10})
-                
-                # TODO: now the retrieved_docs is still a concapted str, need to be fixed
+                # Use the custom retriever tool - which now returns documents directly
+                # The tool is a function that returns documents rather than a wrapper
+                retrieved_docs = self.retriever_tool.run(keywords)
+
+                # concatenate the documents into a single string with their indices
+                retrieved_docs_str = "\n\n".join([f"DOCUMENT {i+1}:\n{doc.page_content}" 
+                                               for i, doc in enumerate(retrieved_docs)])
                 
                 # Store retrieved documents for this section
-                retrieved_documents[section] = retrieved_docs
+                retrieved_documents[section] = {
+                    "content": retrieved_docs_str,
+                    "documents": retrieved_docs
+                }
+
             
             # Update state with retrieved documents
             return {
@@ -162,14 +169,16 @@ class RAGAgent(BaseAgent):
             
             # Generate content for each section
             for section in target_sections:
-                documents = retrieved_documents[section]
+                documents = retrieved_documents[section]["documents"]
+                content = retrieved_documents[section]["content"]
                 
                 # Format documents as text
-                if isinstance(documents, list):
+                if isinstance(content, list):
                     protocol_sections = "\n\n".join([f"DOCUMENT {i+1}:\n{doc.page_content}" 
-                                             for i, doc in enumerate(documents)])
+                                               for i, doc in enumerate(documents)])
                 else:
-                    protocol_sections = documents # just a string
+                    # In case the tool returns something other than a list of documents
+                    protocol_sections = content
                 
                 # Truncate if too long to fit in context window
                 protocol_sections = cut_off_tokens(protocol_sections, 6000)
@@ -187,19 +196,22 @@ class RAGAgent(BaseAgent):
                 content = response.content if hasattr(response, "content") else str(response)
                 
                 # Store content for this section
-                generated_content[section] = content
+                generated_content[section] = {
+                    "content": content,
+                    "cited_documents": documents
+                }
             
             # Create final response message
             result = "Generated ICF Sections:\n\n"
             for section in target_sections:
-                result += f"## {section}\n\n{generated_content[section]}\n\n"
+                result += f"## {section}\n\n{generated_content[section]['content']}\n\n"
             
             final_message = AIMessage(content=result)
             
             # Update state with generated content and add final message
             return {
                 "messages": messages + [final_message],
-                "generated_content": generated_content
+                "generated_content": generated_content,
             }
         
         # Add nodes to the graph
