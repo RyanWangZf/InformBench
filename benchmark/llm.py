@@ -1,19 +1,16 @@
 import json
-from typing import Dict, Any, Union, Optional
-from langchain_core.language_models import BaseLLM
-from langchain_core.output_parsers import StrOutputParser
-from langchain.output_parsers import JsonOutputParser
+from typing import Dict, Any
 from langchain.prompts import PromptTemplate
 from langchain_openai import AzureChatOpenAI
 import os
 
 def call_llm_json_output(
     prompt_template: str,
-    input_variables: Dict[str, str],
-    model: str = "gpt-4o-mini",
+    inputs: Dict[str, str],
+    llm: str = "gpt-4o-mini",
     temperature: float = 0.0,
-    max_tokens: int = 4000,
-) -> Dict[str, Any]:
+    max_completion_tokens: int = 4000,
+) -> str:
     """
     Call a language model with a prompt template and parse the output as JSON.
     
@@ -28,12 +25,12 @@ def call_llm_json_output(
         Parsed JSON response as a dictionary
     """
     llm = AzureChatOpenAI(
-        azure_deployment=model,
+        azure_deployment=llm,
         azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT"),
         api_key=os.environ.get("AZURE_OPENAI_API_KEY"),
         api_version="2024-12-01-preview",
         temperature=temperature,
-        max_tokens=max_tokens
+        model_kwargs={"max_completion_tokens": max_completion_tokens}
     )
     
     # Add JSON formatting instructions to the prompt
@@ -49,11 +46,11 @@ def call_llm_json_output(
     # Create prompt template
     prompt = PromptTemplate(
         template=full_prompt,
-        input_variables=list(input_variables.keys())
+        input_variables=list(inputs.keys())
     )
     
     # Format the prompt with input variables
-    formatted_prompt = prompt.format(**input_variables)
+    formatted_prompt = prompt.format(**inputs)
     
     # Call the LLM
     response = llm.invoke(formatted_prompt)
@@ -64,22 +61,4 @@ def call_llm_json_output(
     else:
         content = str(response)
     
-    # Parse JSON response
-    try:
-        # Try to parse the entire response as JSON
-        parsed_response = json.loads(content)
-        return parsed_response
-    except json.JSONDecodeError:
-        # If that fails, try to extract JSON from within the text
-        try:
-            # Look for JSON-like structures
-            start_idx = content.find('{')
-            end_idx = content.rfind('}') + 1
-            
-            if start_idx >= 0 and end_idx > start_idx:
-                json_str = content[start_idx:end_idx]
-                return json.loads(json_str)
-            else:
-                raise ValueError("Could not extract JSON from response")
-        except Exception as e:
-            raise ValueError(f"Failed to parse JSON response: {e}\nOriginal response: {content}") 
+    return content
