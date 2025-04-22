@@ -1,0 +1,710 @@
+{
+    "template_name": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO\nCONSENT TO PARTICIPATE IN A RESEARCH STUDY",
+    "template_version": "0.1",
+    "template_date": "11/8/2023",
+    "source": "https://irb.ucsf.edu/consent-guidelines",
+    "sections": [
+        {
+            "target_section": "Title",
+            "content_guidance": "Extract the title of the clinical trial from the provided context.",
+            "fallback_template_str": "Clinical Trial Informed Consent Form",
+            "retrieval_query": "Title of the clinical trial",
+            "constant_section_flag": false
+        },
+        {
+            "target_section": "1. Why have I been given this document?",
+            "constant_section_flag": true,
+            "constant_text": "To see if you are interested in taking part in a research study. A research study is a planned project done to learn more about a topic."
+        },
+        {
+            "target_section": "2. Do I need to take part in this research study?",
+            "constant_section_flag": true,
+            "constant_text": "No. Taking part in research is voluntary. If you don't want to take part there will be no penalty and you will not lose your current benefits. The Principal Investigator, or another member of the study team, will explain the study to you. Please ask questions. Take your time deciding if you want to be in this study. You can talk with your health care team, your family, and friends before deciding."
+        },
+        {
+            "target_section": "3.1 Why is this study being done?",
+            "constant_section_flag": false,
+            "fallback_template_str": "\n<todo>Explain the purpose of the study in plain language. Limit the explanation to 1-3 sentences.</todo>\n\n<todo>Any investigational drug(s) or device(s) to be used in the study must be named. The name by which the drug or device is referred to in this section should be used consistently throughout the form.\nThe below are several examples. Replace the placeholders in [] with the appropriate information.</todo>\n",
+            "retrieval_query": "What is the purpose of the study",
+            "content_guidance": "\n\nGuidance:\n\nExplain the purpose of the study in plain language. Limit the explanation to 1-3 sentences.\n\nAny investigational drug(s) or device(s) to be used in the study must be named. The name by which the drug or device is referred to in this section should be used consistently throughout the form.\nThe below are several examples. Replace the placeholders in [] with the appropriate information.\n\nExamples:\n[Example: Phase I study]\nThis study is being done to test a drug called [drug name]. We will test [drug name] with people who have [medical condition]. This drug is experimental. This means that the drug is not approved by the Food and Drug Administration (FDA) for the treatment of [medical condition mentioned above]. The study team is trying to find out the highest dose of the drug that can be given without causing harm. \n\n[If this is a first-in-human study, add:] This is the first time the drug is being tested in humans. This drug is experimental. This means that the drug is not approved by the Food and Drug Administration (FDA). Until now, the drug has mostly been tested in animals.\n\n[Example: Phase II study]\nThis study is being done to test a drug called [drug name]. We will test [drug name] with people who have [medical condition]. This drug is experimental. This means that the drug is not approved by the Food and Drug Administration (FDA) for the treatment of [medical condition mentioned above]. The study team is trying to find out if the drug can treat your condition. They will also study any side effects caused by the drug.\n\n[Example: Phase III study]\nThis study is being done to test a drug called [drug name]. We will test [drug name] with people who have [medical condition]. This drug is experimental. This means that the drug is not approved by the Food and Drug Administration (FDA) for the treatment of [medical condition mentioned above]. The study team is trying to find out if the drug is safe and effective in treating your condition.\n\n[Example: Phase IV study]\nThis study is being done to test a drug called [drug name]. We will test [drug name] with people who have [medical condition]. This drug is experimental. This means that the drug is not approved by the Food and Drug Administration (FDA) for the treatment of [medical condition mentioned above]. The study team is trying to find out if the drug has any rare or long-term side effects. \n\n[Examples: Social/Behavioral studies]\nThis study will look at how people in the Bay Area act when more free flu vaccines are available.\n\nThis study is being done to learn more about how traumatic brain injury patients can have changes in their hearing, balance, sleep and smell.\n\nThis study is being done to learn about the services that clinicians at different organizations think should be offered within primary care practices. \n\nThis study is being done to compare two kinds of counseling about sleep habits. We want to learn if one counseling method is more helpful at improving sleep. We also want to learn if better sleep helps people feel less depressed.\n\n[Example: Simple Blood Draw study]\nIn this study, the researchers are collecting blood samples to learn more about kidney function after transplant.\n"
+        },
+        {
+            "target_section": "3.2 How long would I be in this study? How many study visits are there?",
+            "constant_section_flag": false,
+            "fallback_template_str": "This brief statement should include the following information:\n\n1.\tHow long participation lasts\n2.\tHow many study visits there are\n3.\tIf it's a drug study, how long they will be on the drug\n4.\tIf there's long term follow-up, for how long will it be and how will contact occur\n",
+            "retrieval_query": "1. How long participation lasts\n2.\tHow many study visits there are\n3.\tIf it's a drug study, how long they will be on the drug\n4.\tIf there's long term follow-up, for how long will it be and how will contact occur\n",
+            "content_guidance": "\n\nGuidance:\nThis brief statement should include the following information:\n\n1.\tHow long participation lasts\n2.\tHow many study visits there are\n3.\tIf it's a drug study, how long they will be on the drug\n4.\tIf there's long term follow-up, for how long will it be and how will contact occur\n\nThe below are several examples. Replace the placeholders in [] with the appropriate information.\n\nExamples:\n[Example 1]\nYou would be in this study for about [insert number of days, weeks, months or years] and visit the research site about [insert number] times.\n\n[Example 2]\nYou would be in this study for about [insert number of days, weeks, months or years] and visit the research site about [insert number] times. Of this time, you would be asked to take the study drug for about [insert number of days, weeks, months or years]. After you stop taking the drug, you will be in follow-up for [insert months or years].\n\n[If the study involves long-term follow-up, add something like this] \nWe would like to keep track of your medical condition for [insert length of time]. We would do this by [insert method of contacting the participation, e.g., calling on the phone, emailing, etc.] [insert how often, e.g., once a year] to see how you are doing. Checking up on you over time helps us look at the long-term effects of the study.\"\n"
+        },
+        {
+            "target_section": "3.3 What are the procedures with the most risk in this study?",
+            "constant_section_flag": false,
+            "fallback_template_str": "\nProcedures will be explained in more detail later in the form. For this introductory section, list 1-3 procedures as bullet points, in plain language. \n\nExamples:\n[Example: Investigational drug study]\n\u2022\tTaking the study drug that is not approved by the Food and Drug Administration (FDA)\n\u2022\tThis is the first time the drug is being tested in humans\n\u2022\tX-ray\n\u2022\tBiopsy\n\n[Example: Behavioral study]\n\u2022\tInterview questions about sensitive topics\n\u2022\tLoss of privacy\n",
+            "retrieval_query": "study procedures with the most risk",
+            "content_guidance": "\nGuidance: \nProcedures will be explained in more detail later in the form. For this introductory section, list 1-3 procedures as bullet points, in plain language. \nThe below are several examples. Replace the placeholders with the appropriate information.\n\nExamples:\n[Example: Investigational drug study]\n- Taking the study drug that is not approved by the Food and Drug Administration (FDA)\n- This is the first time the drug is being tested in humans\n- X-ray\n- Biopsy\n\n[Example: Behavioral study]\n- Interview questions about sensitive topics\n- Loss of privacy\n"
+        },
+        {
+            "target_section": "3.4 What risks and discomforts are most severe? What risks and discomforts are most common?",
+            "constant_section_flag": false,
+            "fallback_template_str": "Guidance: \nWe suggest filling out the \u201cWhat are the Risks of this Study\u201d section (section 8) before filling out this section (3.4). Once all the risks are listed in \u201cWhat are the Risks of this Study,\u201d come back to this section and select the 1-3 risks that are \u201cmost severe,\u201d and 1-3 risks that are \u201cmost common.\u201d\n\nRisks should be simply named here, and then described in detail in the \u201cWhat are the Risks of this Study.\u201d For example, if one of the most severe risks of the study is radiation, list it here as \u201cRisk of radiation.\u201d Then, in the \u201cWhat are the Risks of this Study\u201d section, include the entire radiation risk statement.\n\nIt is ok if the same risk is named in both lists in this section. \n",
+            "retrieval_query": "most severe risks and discomforts",
+            "content_guidance": "select the 1-3 risks that are \u201cmost severe,\u201d and 1-3 risks that are \u201cmost common.\u201d\n\nRisks should be simply named here, and then described in detail in the \u201cWhat are the Risks of this Study.\u201d For example, if one of the most severe risks of the study is radiation, list it here as \u201cRisk of radiation.\u201d Then, in the \u201cWhat are the Risks of this Study\u201d section, include the entire radiation risk statement.\n\nIt is ok if the same risk is named in both lists in this section. \n"
+        },
+        {
+            "target_section": "3.5 Are there benefits to taking part in this study?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If there are benefits to taking part in this study",
+                    "choices": {
+                        "yes": "You may or may not benefit from participating in the study. The information learned from this study may help others in the future.",
+                        "no": "There will be no direct benefit to you from participating in this study. The information learned from this study may help others in the future."
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "3.6 What are my other options if I don't want to take part in this study?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "if this is a treatment/therapeutic study",
+                    "choices": {
+                        "yes": "Your other options may include:\n\n- Getting care without being in this study\n- Taking part in another study if you are interested and one is available\n",
+                        "no": "You may be able to take part in another study if one is available."
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "3.7 What is the usual care for my condition?",
+            "constant_section_flag": false,
+            "fallback_template_str": "Guidance:\nIn 1-3 sentences, describe the standard clinical care the patient would receive if not enrolled in this study.\n\nExamples:\nReminder: These are generic examples. Your statement should be written in a way that is accurate and specific to your study population. \n\nThe usual care for your condition is chemotherapy with a medicine that is approved by the Food and Drug Administration (FDA). \n\nThe usual care for your condition is to pursue palliative or symptom-based care. The goal of this type of care is to help provide relief from the symptoms and side effects of your condition. The goal of palliative or symptom-based care is not to treat your cancer.\n\nThe usual care for your condition is medication or psychotherapy.\n\nBleeding at the surgical site is usually handled by first putting pressure on the wound. Then, heat is used to close the areas that are bleeding. This is called cauterizing. There are also sealants and powders to help stop the bleeding.\n",
+            "retrieval_query": "usual care for the target condition",
+            "content_guidance": "Guidance:\nInclude this section for treatment studies only, otherwise delete. \nIn 1-3 sentences, describe the standard clinical care the patient would receive if not enrolled in this study.\nReminder: These are generic examples. Your statement should be written in a way that is accurate and specific to your study population. \nReplace the placeholders in [] with the appropriate information.\n\nExamples:\n1. The usual care for [your condition] is chemotherapy with a medicine that is approved by the Food and Drug Administration (FDA). \n\n2. The usual care for [your condition] is to pursue palliative or symptom-based care. The goal of this type of care is to help provide relief from the symptoms and side effects of your condition. The goal of palliative or symptom-based care is not to treat your cancer.\n\n3. The usual care for [your condition] is medication or psychotherapy.\n\n4. Bleeding at the surgical site is usually handled by first putting pressure on the wound. Then, heat is used to close the areas that are bleeding. This is called cauterizing. There are also sealants and powders to help stop the bleeding.\n",
+            "todo_list": [
+                {
+                    "question": "If this is a treatment study",
+                    "choices": {
+                        "yes": "",
+                        "no": "<todo>Include this section for treatment studies only, otherwise delete the section.</todo>"
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "3.8 If my condition improves while taking the study drug, can I continue taking it after the study?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If this is a drug treatment study",
+                    "choices": {
+                        "yes": "Some studies may allow you to continue taking the drug after the study ends. Some studies may not. It is important to talk to the study team and ask them about the rules and your options.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "4. How many people will take part in this study?",
+            "constant_section_flag": false,
+            "fallback_template_str": "About <todo>insert number</todo> people will take part in this study at UCSF. <todo> [If this is a multisite study, include:] About [insert number] will take part in this study at all research sites.</todo>",
+            "retrieval_query": "How many people will take part in this study",
+            "content_guidance": " \nGuidance:\nPlug your sample size number(s) into the language provided in the template. \n\nExamples:\nAbout [10-12] people will take part in this study.\n\nAbout [100] people will take part in this study at UCSF. Over [4,000] people will take part in this study at all research sites.\n"
+        },
+        {
+            "target_section": "5. Who is paying for this study?",
+            "constant_section_flag": false,
+            "fallback_template_str": "This study is being paid for by <todo>enter funding source(s)</todo>",
+            "retrieval_query": "funding sources",
+            "content_guidance": "Guidance: \nThe IRB requires that all consent forms disclose which agencies or institutions (e.g., National Institutes of Health, Department of Defense, Center for Disease Control, State agencies), cooperative groups (CALGB, COG, ACTG), foundations or industry sponsors are funding the research or providing study drugs or equipment for the study. \n\nIf the study is not being funded by an external agency, then the internal funding source, i.e., Department funds, personal funds, should be identified.\n\nExamples:\nThis study is being paid for by <todo>enter funding source(s)</todo>\n"
+        },
+        {
+            "target_section": "6. Do any UCSF researchers of this study have financial interests that I should know about?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If any UCSF researchers have financial interests that participants should know about",
+                    "choices": {
+                        "yes": "Yes. <todo>Enter the informed consent language provided in the UCSF Conflict of Interest Advisory Committee Decision Letter.</todo> We are letting you know about this in case it changes your mind about taking part in this study.",
+                        "no": "No"
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "7. What are the research procedures of this study? ",
+            "constant_section_flag": false,
+            "fallback_template_str": "Guidance: \nThis section should describe procedures that are being done for research purposes. If clinical procedures are being altered, extended, or performed more frequently for research purposes, or if data from clinical procedures are being used for research, describe the portion that is being done for research.\n    ",
+            "retrieval_query": "\n- screening procedures\n- examples, tests, or procedures\n- follow-up procedures\n- arms or groups\n",
+            "content_guidance": "Guidance:\nThis section should describe procedures that are being done for research purposes. If clinical procedures are being altered, extended, or performed more frequently for research purposes, or if data from clinical procedures are being used for research, describe the portion that is being done for research.\n\nHere is an example of how to structure this section, please replace the placeholders with the appropriate information:\n\nExample:\n\n**Screening procedures** <todo>Include if your study has a screening phase</todo>\n\nThis study has a screening portion to see if you qualify for the main part of the study. You will need to have the following exams, tests or procedures to find out if you can be in the main part of the study. If you have had some of them recently, they may not need to be repeated. This will be up to your study doctor.\n- <todo>List exams, tests and procedures as appropriate. Use bulleted format.</todo>\n\n**Study procedures** \n\nIf you qualify for the study, you will need to have the following exams, tests or procedures.\n- <todo>List exams, tests and procedures as appropriate. Use bulleted format.</todo>\n\n**Follow-up procedures** \n\nThe study team will follow up with you to see how you are doing.\n- <todo>List follow-up procedures and how often</todo>\n\nOr\n\nThe study team will continue to review your medical records for <todo>insert length of time</todo> to see how you are doing.\n\n**Randomization** <todo>Include if your study is randomized</todo>\n\nThis study has different groups. You will be put into a group by chance. How your group is chosen is like flipping a coin or rolling dice. Your chance of being put into one group might be higher depending on the design of the study.\n\u2022\tIf you are in group 1 \u2026 <todo>Explain what will happen for this group with clear indication of which interventions depart from routine care.</todo>\n\u2022\tIf you are in group 2 \u2026 <todo>Explain what will happen for this group with clear indication of which interventions depart from routine care.</todo>\n\u2022\t<todo>For studies with more than two groups, explain each group using format above</todo>\n\n**Study plan**\n\nYou will receive <todo>drugs or interventions</todo> every <todo>insert appropriate number of days or weeks</todo> in this study. This <todo>insert number of days or weeks</todo> period of time is called a cycle. The cycle will be repeated <todo>insert number</todo> times. Each cycle is numbered in order. The chart below shows what will happen to you during Cycle 1 and future treatment cycles. The left-hand column shows the day in the cycle and the right-hand column tells you what to do on that day.\n",
+            "todo_list": [
+                {
+                    "question": "If the study involves placebo",
+                    "choices": {
+                        "yes": "**Placebo**: A pill or substance that looks like the study drug but has no drug in it.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves blood drawing",
+                    "choices": {
+                        "yes": "**Blood drawing (venipuncture)**: <todo>Once a week,</todo> a blood sample will be taken by inserting a needle into a vein in your body. Each sample will be about [XX] teaspoons. A total of about <todo>XX</todo> tablespoons will be taken for the whole study.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves X-ray",
+                    "choices": {
+                        "yes": "**X-ray**: This study involves X-rays. An X-ray is a test that uses a special machine to take pictures of the inside of the body. An X-ray involves a type of energy called radiation",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves CT Scan",
+                    "choices": {
+                        "yes": "**CT scan**: This study involves computed tomography (CT) scans. A CT scan is a test that uses a special machine to take pictures of the inside of the body. A CT scan involves a type of energy called radiation. For the CT scan, you will need to lie still on a table. The table will move and the machine will make clicking and whirring noises as the pictures are taken. Each CT scan will take about 15 minutes to a half hour. <todo>[If appropriate, add: An iodine dye (contrast material) will first be [injected into a vein/given to you orally/rectally]. The dye makes tissue and organs more visible in the pictures.]</todo>",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves MRI",
+                    "choices": {
+                        "yes": "**MRI**: This study involves Magnetic Resonance Imaging (MRI). An MRI is an imaging technique that takes pictures of the inside of your body. This helps to see your organs, tissues and bones. MRI uses a strong magnetic field and radio waves. Depending on the MRI, you may need to be placed in a narrow tunnel and you may hear loud banging noises. How long the MRI will take depends on the study. <todo>[If appropriate, add: Gadolinium (contrast material) will first be [injected into a vein in your arm]. The dye makes tissue and organs more visible in the MRI.]</todo>",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves MUGA Scan",
+                    "choices": {
+                        "yes": "**MUGA scan**: This is a test that checks how well your heart is pumping blood. It uses a special camera and a small amount of radioactive material to take pictures of your heart as it beats. These pictures help to see if your heart is working properly. It doesn't hurt and usually takes about 1-2 hours.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves pregnancy test AND If this form is being used to consent subjects under the age of 18",
+                    "choices": {
+                        "yes": "In California, information about pregnancy test results, engagement in sexual activity, and use of birth control may not be shared with parents without your permission. We will not tell your parents the pregnancy test result. <todo>*Include this only if pregnancy is an exclusion criterion*: If the pregnancy test is positive, however, your parents may guess you are pregnant because you cannot join the study. If you think you may be pregnant and you do not want your parents to know, you may not want to participate in this study.</todo> If you are pregnant, the study team will tell you. They will ensure you have medical follow up for the pregnancy.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves pregnancy test AND If this form is being used to consent is being used to get parental permission for a subject under the age of 18",
+                    "choices": {
+                        "yes": "In California, the following information may not be shared with parents without your child's permission:\n\n- pregnancy test results\n- engagement in sexual activity\n- use of birth control  \n\nUnless your child gives us permission, we will not inform you of the pregnancy test result.  If your child is pregnant, the study team will ensure that your child has medical follow up for the pregnancy.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves Sedation",
+                    "choices": {
+                        "yes": "",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves General Anesthesia",
+                    "choices": {
+                        "yes": "**General Anesthesia**: This study involves general anesthesia for research purposes. General anesthesia is a medical state where a person is put into a deep sleep in order for you to tolerate the procedure. Before general anesthesia begins, your overall health will be checked. You are asked not to eat or drink solid or particulate foods for at least 6 hours and clear liquids for 2 hours. A catheter will be placed in a vein prior to start of general anesthesia. You will receive medication in your vein that makes you fall into a deep sleep, a special tube will be placed in your airway to help you breathe and prevent contents of your stomach from entering your lungs. You won't feel pain during the procedure. A machine may assist your breathing. Your vital signs will be carefully monitored. At the end of the procedure, the anesthesia is reduced, allowing you to wake up. You will then go to a recovery area for monitoring and comfort. The exact steps can vary depending on your health and the type of procedure you're having. ",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves the Collection/Storage of Biological Specimens",
+                    "choices": {
+                        "yes": "\n<todo> This is sample wording only, use/edit according to your specific study  </todo>\n\n- After all tests needed for your medical care are done, your leftover specimens will not be thrown away. Instead, we will save them in what is called a \u201ctissue bank.\u201d This bank will store your specimens in case they are needed for future research. We also will save information from your medical record, including things like <todo>List all types of information to be recorded for study purposes, including results of physical examinations, diagnostic tests, medical questionnaires and histories, diagnoses, treatments, etc. Be complete; this listing is required by HIPAA regulations.</todo>. We do not know if your specimens or medical record will be used, but they might be used in research about <todo>List the types of conditions that the specimens may be used for research on, e.g. cancer, heart disease, diabetes, etc.</todo> or other diseases.\n\n- <todo>If any additional specimens will be taken for research purposes, describe the procedures, including how the sample will be taken and how much will be taken. For example:</todo> We will also collect a sliver of normal muscle or skin (the size of a grain of rice) from the same place we make a cut for your surgery. We will draw extra blood (2 tablespoons) through tubes already in place for your surgery. \n\n- Your specimens will be kept for <todo>State how long specimens will remain in the repository. If they will become part of a permanent collection, they will be kept indefinitely.</todo> If you decide later that you do not want your specimens and information to be used for future research, tell the Principal Investigator. This person\u2019s contact information is on Page 1 of this form. The study team will destroy any data they still have that can be linked to you. We cannot destroy data that has already been shared with other researchers.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If you want to insert a simplified calendar (study chart) or schema (study plan) here",
+                    "choices": {
+                        "yes": "<todo>Insert a simplified calendar (study chart) or schema (study plan) here</todo>",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "7.1 Where do the procedures happen?",
+            "constant_section_flag": false,
+            "fallback_template_str": "The study procedures will take place at UCSF. <todo>[If the study involves procedures at other locations, include:] Some study procedures may take place at other locations. The study team will tell you where these locations are.</todo>",
+            "retrieval_query": "Where do the procedures happen",
+            "content_guidance": "Guidance: If different procedures will take place at different locations, or if the study is conducted online or remotely, specify accordingly.\n\nHere are a few examples, choose the ones apply to your study and replace the placeholders with the appropriate information.\n\nExamples:\n\n[example1] Study procedures will be done at University of California, San Francisco Parnassus campus.\n\n[example2] Study procedures will be done at UCSF Parnassus, UCSF Parnassus outpatient surgery center, and UCSF Mt. Zion. \n\n[example3] The counseling sessions will be done over Zoom. The workshop will be done at the Woodland Community Center. \n"
+        },
+        {
+            "target_section": "7.2 Will clinically relevant research results be shared with me?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If your study involves tests or procedures that may generate clinically relevant results, choose one of the 2 consent form options below",
+                    "choices": {
+                        "yes": "<todo>Describe under what conditions you might share clinically relevant results with the participant or their clinical care team</todo>",
+                        "no": "No"
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "8. What are the risks of this study?",
+            "constant_section_flag": false,
+            "retrieval_query": "\n1. adverse events\n2. side effects\n3. risks and discomforts",
+            "content_guidance": "Guidance:\nList the risks and side effects related to the investigational aspects of the study. \n\nBe sure to use lay language so participants can understand the risks and side effects. Do not list side effects of supportive medications unless the medications are specifically mandated by the study. Do not list the risks of standard care. \n\nExplain the consequences of risks where needed. For example, \"lower white blood cell counts\" could be explained as follows: \"The treatment may weaken your immune system. so that you might get more frequent colds or more serious infections.\"\n\nRisks and side effects related to this study include: \nCommon, Some May be Serious\n(Out of 100 people, more than 20 and up to 100 may have:)\n- Enter risk/side effect (list most serious risks first)\n- Enter risk/side effect\n- Enter risk/side effect\n\nOccasional, Some May be Serious\n(Out of 100 people, from 4-20 may have:)\n- Enter risk/side effect (list most serious risks first)\n- Enter risk/side effect\n- Enter risk/side effect\n\nRare, And Serious \n(Out of 100 people, 3 or fewer may have:)\n- Enter risk/side effect (list most serious risks first)\n- Enter risk/side effect\n- Enter risk/side effect\n\nNotes on these categories:\n- In all categories, list the most serious risks first. \"Serious\" is defined as side effects that may require hospitalization or may be irreversible, long-term, life threatening or fatal. \n- Physical and non-physical risks and side effects should include such things as the inability to work.  Whenever possible, describe side effects by how they make a patient feel, for example, \"Loss of red blood cells, also called anemia, can cause tiredness, weakness and shortness of breath.\u201d \n- Use lay language to describe side effects.  For example, instead of syncope, use \u201cfainting\u201d; instead of dyspnea, \u201cshortness of breath.\u201d\n- For some investigational drugs/ interventions/ devices there may be side effects that have been noted during treatment, but not enough data is available to determine if the side effect is related to the drug/ intervention/ device. Inclusion of this information in the informed consent document is not mandatory, but it may be prudent to mention the most serious effects. If included, these side effects should be listed under a separate category titled \"Side effects reported by patients, but not proven to be caused by [drug/ intervention/ device].\"  Side effects in this category do not have to be labeled as \"Common,\" \"Occasional,\" or \"Rare and Serious\" and should not be repeated here if they appear in a previous category.  Similar to the other categories, these side effects should be listed in a bulleted format.]\n",
+            "todo_list": [
+                {
+                    "question": "if the research involves the study of drugs, devices, or experimental medical procedures",
+                    "choices": {
+                        "yes": "You may have side effects or discomforts while on the study. They may be mild or very serious. Doctors don't know all the possible side effects.  In some cases, side effects can be serious, long lasting, or may never go away. <todo>Include if applicable: There also is a risk of death.</todo> \nPlease talk with the study team about any side effects that you experience while taking part in the study.\nFor more information, ask your study doctor. \n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves randomization",
+                    "choices": {
+                        "yes": "**Randomization risks**: You might be put into a group that receives something that is not as effective as another group. You might have more side effects than people in another group or people who don't join this study.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves a placebo",
+                    "choices": {
+                        "yes": "**Placebo risks**: If you are in a group that receives placebo, you will not receive the study drug.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves blood drawing (venipuncture)",
+                    "choices": {
+                        "yes": "**Blood drawing (venipuncture) risks**: Drawing blood may cause discomfort from the needle stick. It may cause bruising, infection, and fainting.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves the research collection of non-exempt tissue derived from clinical specimens. See UCSF's Research Tissue Acquisition Policy for more information, and contact research@ucsf.edu if you have questions. Note: This statement is not required for studies collecting designated research biopsies",
+                    "choices": {
+                        "yes": "**Risk of using your tissue for research**: This research study uses tissue that was taken as part of your usual care. There is a small chance that using this tissue for research will use up the tissue. If this happens, your doctors might not be able to make a clinical diagnosis or complete other tests. To help reduce the risk of this happening, a trained person will evaluate if there is enough tissue for research. With this process, we believe the risk of using up your tissue for research is small.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves radiation exposure",
+                    "choices": {
+                        "yes": "If your study involves radiation, you need to submit for review to the [Radiation Safety Committee (RSC)](https://ehs.ucsf.edu/labs-and-research/radiation-safety-program). The RSC will provide you with a radiation risks statement for the consent form. Contact them at RSCHumanResearch@ucsf.edu.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves CT scans",
+                    "choices": {
+                        "yes": "**CT scan risks**. CT scans involve the risks of radiation. Radiation is a type of energy that can go through your body and might harm your cells. You may experience feelings of claustrophobia (feeling uncomfortable in a small area during the CT scan). If the CT scan involves a contrast agent, there are more risks.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves MRI",
+                    "choices": {
+                        "yes": [
+                            "<todo>Use if NOT giving sedation</todo>\n\n**MRI risks**: The MRI machine acts like a large magnet. Metal objects like keys and cell phones are not allowed in the MRI room. If you have metal in your body, an MRI can be dangerous to you. Please tell the study team if you have metal in your body like a medical implant or metal fragments in your eyes. Depending on the MRI, you may experience feelings of claustrophobia (feeling uncomfortable in a small area). The machine may make a loud banging noise. You may be asked to wear earplugs to prevent the risk of temporary hearing loss from this noise.  During the MRI you may be asked to not swallow for a while, which can be uncomfortable. \n                \n<todo>Include this paragraph if contrast agent will NOT be used AND the study is enrolling people who can become pregnant</todo>\n\nThere are possible unknown risks to a fetus. These risks could be long-term. People who are pregnant in their first trimester (up to 13 weeks) should not take part in this study. \n",
+                            "<todo>Use if giving sedation, common in pediatric studies</todo>\n\n**MRI risks**: The MRI machine acts like a large magnet. Metal objects like keys and cell phones are not allowed in the MRI room. If you have metal in your body, an MRI can be dangerous to you. Please tell the study team if you have metal in your body like a medical implant or metal fragments in your eyes. During the MRI you may be asked to not swallow for a while, which can be uncomfortable. You will be under sedation (anesthesia) during the MRI, so will be either drowsy or fully asleep. The machine may make a loud banging noise, but you will not hear this much due to the anesthesia. You may be asked to wear earplugs to prevent the risk of temporary hearing loss. \n\n<todo>Include this paragraph if contrast agent will NOT be used AND the study is enrolling people who can become pregnant</todo>\n\nThere are possible unknown risks to a fetus. These risks could be long-term. People who are pregnant in their first trimester (up to 13 weeks) should not take part in this study. \n",
+                            "<todo>Use if some participants may be given sedation, and others will not (Note: In this case, you must also include a separate statement about the risks of sedation)</todo>\n\n**MRI risks**: The MRI machine acts like a large magnet. Metal objects like keys and cell phones are not allowed in the MRI room. If you have metal in your body, an MRI can be dangerous to you. Please tell the study team if you have metal in your body like a medical implant or metal fragments in your eyes. During the MRI you may be asked to not swallow for a while, which can be uncomfortable. \n\nIf you are under sedation (anesthesia) during the MRI: You will be either drowsy or fully asleep. The machine may make a loud banging noise, but you will not hear this much due to the anesthesia. You may be asked to wear earplugs to prevent the risk of temporary hearing loss. \n\nIf you are not under sedation during the MRI: Depending on the type of MRI, you may experience feelings of claustrophobia (feeling uncomfortable in a small area). The machine may make a loud banging noise. You may be asked to wear earplugs to prevent the risk of temporary hearing loss. \n\n<todo>Include this paragraph if (1) contrast agent will NOT be used AND (2) the study is enrolling people who can become pregnant</todo>\n\nThere are possible unknown risks to a fetus. These risks could be long-term. People who are pregnant in their first trimester (up to 13 weeks) should not take part in this study. \n"
+                        ],
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves sedation",
+                    "choices": {
+                        "yes": "**Sedation risks**. Allergic reaction, such as skin rash, nausea and vomiting. Other risks include confusion, and drowsiness. There is a rare risk of infection from an IV site or from the equipment used. On rare occasion sedation can lead to difficulty breathing and stomach contents going into the airways and lungs.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves general anesthesia",
+                    "choices": {
+                        "yes": "**General Anesthesia risks**: The most common side effect is a sore throat from the tube in your throat. Other risks include:\n\n- Allergic reactions to anesthesia medications such as skin rash\n- Nausea and vomiting \n- Rare: You may get a cut on the lip or a chipped tooth from placing the tube in your throat\n- Difficulty breathing, confusion, memory problems, infection from the equipment, stomach contents going into the airways and lungs, and effects on heart function and blood pressure\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves contrast agent",
+                    "choices": {
+                        "yes": "**Contrast agent risks**: A contrast agent is a special dye used in some medical imaging tests like CT scan or MRI. This dye helps to better see the images of your body. One risk of contrast agent is that you may have an allergic reaction. This can cause symptoms like itching or trouble breathing. Another risk is that the contrast agent can damage your kidneys. This is especially true if you have kidney problems already. In very rare cases, the contrast agent can cause a serious condition called nephrogenic systemic fibrosis (NSF). NSF can cause thickening and hardening of the skin and can damage internal organs.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves Reproductive risks",
+                    "choices": {
+                        "yes": "\n**Reproductive risks**: The drugs or procedures in this study can harm a fetus or an infant. You should not become pregnant, breastfeed, or cause a pregnancy while on this study. If you can become pregnant, you will have a pregnancy test at set times during the study. If sexual activity could lead to a pregnancy, you and your partner must use contraception while you are in the study. You may also need to use contraception for a period of time after the study. Acceptable methods of contraception may include:\n- An intrauterine device (IUD)\n- Hormonal contraceptives (birth control pill, patch, ring, injectable, or implant)\n- Condoms (internal or external) used with another acceptable method\n- Complete abstinence (no sexual activity that could lead to a pregnancy)\n\nThe study team will describe which of these methods are acceptable for this study. If you think you may be pregnant, or may have caused a pregnancy, at any time during the study, tell the study staff right away. They will talk with you about your options.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study needs safe handling of drugs procedures",
+                    "choices": {
+                        "yes": "**Safe Handling of Drugs**: Touching the study drug may cause side effects. Having contact with bodily fluid or waste from someone who took the study drug also may cause side effects. The side effects may affect a caretaker. The study team will provide instructions on how to handle the drug, dispose of the drug, and how to clean areas that may become contaminated.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study using biomedical/cancer or expanded access template",
+                    "choices": {
+                        "yes": [
+                            "<todo>General statement for use in most studies</todo>\n**Unknown Risks**: The study drug or treatments may have side effects that no one knows about. The study team will let you know if they learn anything that might make you change your mind about taking part in the study.",
+                            "<todo>pediatric studies where treatment is being studied for the first time in the pediatric population, but has been studied in adults.</todo>\n**Unknown Risks**: The study drug or treatments have not been studied in children before. They have been studied in adults. Children may have side effects that the adults did not have. The study team will let you know if they learn anything that might make you change your mind about taking part in the study.",
+                            "<todo>pediatric studies where treatment is being studied for the first time in the pediatric population, and has NOT been studied in adults.</todo>\n**Unknown Risks**: The study drug or treatments have not been studied in children or adults before. The study team will let you know if they learn anything that might make you change your mind about taking part in the study."
+                        ],
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "9. Will I be paid if I take part in this study?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If there is payment",
+                    "choices": {
+                        "yes": "\nIn return for your time and effort, you will be paid <todo>$XXX</todo> for taking part in this study. <todo>Describe any pro-rating or bonuses and specify method and timing of payment.</todo>\n\n<todo>Include the following statement if participants will be paid by check:</todo> If you are paid by check, the researchers are required to collect your Social Security number and home address for check processing purposes.\n\n<todo>Include the following statement if you are using a third-party payment method like Greenphire, Clincierge, Colpitts, etc. Amend the statement if necessary so it is accurate regarding the system being used.</todo> \nA company called <todo>company name</todo> is working on behalf of the study to pay participants. <todo>Company name</todo> will need to collect certain personal information about you to set up your payment account. \n\n<todo>If the company has a separate informational document or consent sheet about how the payment system works, include the following sentence in this consent form.</todo> You will be given a separate document from <todo>company name</todo> with detailed information about the payment process. <todo>Note: Do not submit the company\u2019s document/s to the IRB.</todo>\n \n<todo>Include the following if participants will be paid more than $599.99 in a calendar year</todo> The Internal Revenue Service (IRS) must be notified when a participant is paid $600 or more in a year, so your payment will be reported to the IRS. You must give the researchers your address and Social Security number for IRS reporting purposes.\n",
+                        "no": "You will not be paid for taking part in this study."
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "9.1 Will I share in any profits from this study?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If the study involves biospecimens or data derived from biospecimens, otherwise delete this subsection",
+                    "choices": {
+                        "yes": "No. Your specimens or information obtained from your specimens may be used for commercial use. If this happens, you will not share in any profits.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "10. Will I be reimbursed for expenses if I take part in this study?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If there may be expenses and there is reimbursement",
+                    "choices": {
+                        "yes": "\nYou will be reimbursed for expenses if you take part in this study. <todo>Describe what expenses, e.g., travel, meals, lodging, parking, and specify method and timing of reimbursement.</todo> \n\n<todo>Include the following statement if participants will be reimbursed by check:</todo> If you are reimbursed by check, the researchers are required to collect your Social Security number and home address for check processing purposes.\n\n<todo>Include the following statement if you are using a third-party reimbursement method like Greenphire, Clincierge, Colpitts, etc. Amend the statement if necessary so it is accurate regarding the system being used.</todo> \nA company called <todo>company name</todo> is working on behalf of the study to reimburse participants. <todo>Company name</todo> will need to collect certain personal information about you to set up your reimbursement account. \n\n<todo>If the company has a separate informational document or consent sheet about how the reimbursement system works, include the following sentence in this consent form.</todo> You will be given a separate document from <todo>company name</todo> with detailed information about the reimbursement process. <todo>Note: Do not submit the company\u2019s document/s to the IRB.</todo>\n\n<todo>[See the IRB website for more info on subject reimbursement.](https://irb.ucsf.edu/node/846)</todo>\n\n"
+                    }
+                },
+                {
+                    "question": "if participants will not incur any expenses (e.g., travel, meals, lodging, parking, etc.)]",
+                    "choices": {
+                        "yes": "This study does not involve any expenses to research participants.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "11. How will my information be used?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "For studies that use data only (no specimens), and are not subject to NIH's DMS policy",
+                    "choices": {
+                        "yes": "Researchers will use your information to do this study. Once the study is done, we may use your information for other research studies in the future. We may share it with other researchers to be used in their studies. We will not share your name or other information that could identify you. We cannot promise that this will prevent future researchers from figuring out who you are. We will not ask you for additional permission to share this de-identified information.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "For studies that use data AND specimens, and are not subject to NIH\u2019s DMS policy",
+                    "choices": {
+                        "yes": "Researchers will use your information and specimens to do this study. Once the study is done, we may use your information and specimens for other research studies in the future. We may share them with other researchers to be used in their studies. We will not share your name or other information that could identify you. We cannot promise that this will prevent future researchers from figuring out who you are. We will not ask you for additional permission to share this de-identified information.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "For studies that use data only (no specimens), and which are subject to NIH\u2019s DMS policy",
+                    "choices": {
+                        "yes": "Researchers will use your information to do this study. Once the study is done, we may use your information for other research studies in the future. We will share it with other researchers to be used in their studies. We will not share your name or other information that could identify you. We cannot promise that this will prevent future researchers from figuring out who you are. We will not ask you for additional permission to share this de-identified information.\n\nYour research data will be stored in a computer database. Other researchers and companies can use the database to do their own research. There are different types of databases. Some are available to the public. This is called \u201cunrestricted access.\u201d Others require special permission to use. This is called \u201crestricted access.\u201d\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "For studies that use data AND specimens, and are subject to NIH\u2019s DMS policy",
+                    "choices": {
+                        "yes": "Researchers will use your information and specimens to do this study. Once the study is done, we may use your information and specimens for other research studies in the future. We will share them with other researchers to be used in their studies. We will not share your name or other information that could identify you. We cannot promise that this will prevent future researchers from figuring out who you are. We will not ask you for additional permission to share this de-identified information.\n\nYour research data will be stored in a computer database. Other researchers and companies can use the database to do their own research. There are different types of databases. Some are available to the public. This is called \u201cunrestricted access.\u201d Others require special permission to use. This is called \u201crestricted access.\u201d\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "For studies using data only. Only use if you are 100% sure that de-identified data will never be shared or used outside of this study",
+                    "choices": {
+                        "yes": "We will use your information to conduct this study. Information gathered during this research study will only be used for this study. They will not be shared with other researchers.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "For studies using data and specimens. Only use if you are 100% sure that de-identified data will never be shared or used outside of this study",
+                    "choices": {
+                        "yes": "We will use your specimens and information to conduct this study. Specimens and information gathered during this research study will only be used for this study. They will not be shared with other researchers.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "11.1 Genetic testing statement",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Include this subsection only if this study involves genetic testing, otherwise delete.</todo>",
+            "todo_list": [
+                {
+                    "question": "if you might conduct whole exome or whole genome sequencing.",
+                    "choices": {
+                        "yes": "Researchers may use your specimens to look at all of your DNA. This is called \u201cwhole genome sequencing.\u201d DNA contains information that determines things like eye color, height, or disease risk that are passed on from parent to child.",
+                        "no": "Researchers may use your specimens to look at your DNA. DNA contains information that determines things like eye color, height, or disease risk that are passed on from parent to child."
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "11.2: How will my genetic information be shared?",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Include this section if this study is subject to the [NIH Genomic Data Sharing Policy](https://irb.ucsf.edu/nih-genomic-data-sharing-gds-policy-and-genome-wide-association-studies-gwas), otherwise delete</todo>\n    \nWe may use your genetic information and some medical record data to do research in the future. We will remove your name and other personal information before sharing it with other researchers. We may share this information with other scientists or companies not at UCSF or SFVAHCS (if this study involves SFVAHCS). This information may be put into an unrestricted or controlled access government health research database. Even though no personal information will be included, we cannot guarantee that no one will ever be able to use this information to identify you. \n",
+            "todo_list": [
+                {
+                    "question": "Include the following paragraph if IDENTIFIABLE genetic data will be stored for future research. This should be very rare. Best practice is to anonymize or de-identify data whenever possible",
+                    "choices": {
+                        "yes": "If you change your mind about your genetic data that can be linked to you being used for future research, tell the Principal Investigator. This person\u2019s contact information is on Page 1 of this form. The study team will destroy any data they still have that can be linked to you. We cannot destroy data that has already been shared with other researchers.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "12. How will information about me be kept confidential?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If the study will access or create medical records",
+                    "choices": {
+                        "yes": "If you take part in this study, there may be some loss of privacy. We will do our best to make sure information about you is kept confidential. But we cannot guarantee total privacy. Some information from your medical records may be collected and used for this study. If you do not have a UCSF medical record, one will be created for you. Your signed consent form and some of your research tests will be added to your UCSF medical record. People involved with your future care and insurance may become aware that you participated in this study. They may see information added to your medical record. Study tests and information obtained from you will be part of your research records. This information may be added to your medical record. Your personal information may be given out if required by law. Information from this study may be published or presented at scientific meetings. If it is, your name and other personal information will not be used. ",
+                        "no": "If you take part in this study, there may be some loss of privacy. We will do our best to make sure information about you is kept confidential. But we cannot guarantee total privacy. Your personal information may be given out if required by law.  If information from this study is published or presented at scientific meetings, your name and other personal information will not be used."
+                    }
+                },
+                {
+                    "question": "If the study collects information about activities that are illegal where the participants live, e.g., abortion care, gender affirming care for minors, collection of fetal tissue, etc.",
+                    "choices": {
+                        "yes": "Some studies may collect information about activities that may be illegal where you live. We have taken special precautions and we will do our best to protect the information we collect from you. It is rare but possible that there could be a loss of confidentiality. For some people, this may have no negative effects. For others, it could put their personal relationships, reputation, employment, or housing at risk. It could also present legal risks. Take the time you need to carefully consider the risks of a confidentiality loss to you.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves experimental genetic tests",
+                    "choices": {
+                        "yes": "Genetic information that results from this study does not have medical or treatment importance at this time. What we learn about your genes in this study might affect what insurance companies or employers think about your health. To keep it private, we won't add this genetic data to your medical record.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves experimental or clinical genetic tests",
+                    "choices": {
+                        "yes": "Doing a genetic study may be harmful on family or other relationships. It could help people who are like you in terms of race, ethnicity, sex, or gender in the future. But it could also connect certain traits to these categories. In some cases, this could reinforce harmful stereotypes.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves FOCUS GROUPS",
+                    "choices": {
+                        "yes": "<todo>Add a statement about how privacy will be maintained in the focus group setting. This will be unique to your study. Here\u2019s an example: \u201cThe researchers will ask you and the other people in the group to use only first names during the group session. They will also ask you not to tell anyone outside the group what any particular person said in the group. However, the researchers cannot guarantee that everyone will keep the discussions private.\u201d</todo>",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "12.1. Who may review my research information?",
+            "constant_section_flag": true,
+            "constant_text": "\n<todo>Delete any bullet points that do not apply to your study.</todo>\n\nAuthorized representatives from the following organizations may review your research data for the purpose of monitoring or managing the conduct of this study:\n\n- Representatives of the University of California\n- Representatives of the Sponsor <todo>List Sponsor(s), as applicable</todo>\n- Representatives of the Research Consortium <todo>name the Consortium OR remove if this is not a Consortium study</todo>\n- Representatives of the National Institutes of Health <todo>remove if this is not an NIH-funded study</todo>\n- Representatives of the Food and Drug Administration (FDA) <todo>remove if this is not an FDA-regulated study</todo>\n- Representatives of the Office of Human Research Protections (OHRP) <todo>remove this if the study is not conducted or supported by an HHS entity, e.g., NIH, CDC, FDA, AHRQ, CMS, HRSA, etc.</todo>\n- Representatives of the Department of Veterans Affairs <todo>remove if this is not a VA consent form or a VA-funded study</todo>\n- <todo>list other agencies - in or outside the US - that might inspect research records</todo>\n"
+        },
+        {
+            "target_section": "12.2. Certificate of Confidentiality",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Include if the study has a Certificate of Confidentiality, otherwise delete this subsection. See the companion document for more information on certificates of confidentiality.</todo>\n\nThis study has something called a Certificate of Confidentiality. This helps keep your information private. Researchers can\u2019t be forced to share your information with others like courts or law enforcement.\n\nThere are some things that the certificate does not stop:\n\n- Reporting abuse of children or elders, or if you or someone else is in danger.\n- Reporting of certain diseases.\n- Groups (like those listed in 12.1) from checking the research records to make sure the study is going okay.\n- Agencies from getting information if they need it for safety reasons.\n- Your information from being used in other research if it follows the rules.\n\nThe certificate doesn't stop you from:\n\n- Talking about being in this research study.\n- Looking at your own medical records. \n    "
+        },
+        {
+            "target_section": "13. Does this study involve testing of diseases and conditions that must be reported to the public health department?",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "If the study DOES involve the testing of reportable diseases and conditions for research purposes",
+                    "choices": {
+                        "yes": "By California law, some medical test results must be shared with the county public health department. This is done so health experts can keep track of these diseases. The report we share with the health department will include information like your full name and social security number. The researchers can tell you what kinds of tests in this study will be shared.",
+                        "no": "No, this study does not involve testing for reportable diseases and conditions."
+                    }
+                },
+                {
+                    "question": "If the study involves HIV testing for research purposes (including screening for study eligibility).",
+                    "choices": {
+                        "yes": "Positive HIV test results will be shared with the county public health department. This applies even if it is not a new HIV diagnosis. When someone tests positive for HIV, we share this information with the San Francisco Department of Public Health:\n\n- CD4+ count (or T-cell count)\n- Viral load\n- Viral genotype \n\nIf you do not live in San Francisco County, this information may also be shared with your home county health department. \n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "14. What happens if I am injured or feel harmed because I took part in this study?",
+            "constant_section_flag": true,
+            "constant_text": "It is important to tell the Principal Investigator if you feel you have been injured or harmed because you took part in this study. The contact information for this person is on the first page of this form."
+        },
+        {
+            "target_section": "14.1 Treatment and Compensation for Injury",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Required for [greater than minimal risk studies](https://irb.ucsf.edu/levels-review#minimal) (also called \u201cfull committee\u201d studies) and Dept. of Veterans Affairs studies, otherwise delete this subsection.</todo>\n    \n<todo>The standard Treatment and Compensation for Injury statement is in the template. If any of the following conditions apply, please replace the standard statement with an alternate statement listed below: \n\n(1) the Sponsor requests MMSEA 111 Language\n(2) this is a clinical trial of a COVID-19 countermeasure and the PREP Act applies. \n(3) this is a SFVAHCS study or this consent form will be used at a SFVSHCS site (for UCSF/VA studies)\n(4) the Sponsor chooses to remain silent on this point, and/or the sponsor is the NIH\n</todo>\n    ",
+            "todo_list": [
+                {
+                    "question": "If using standard Treatmetn and Compensation for Injury statement",
+                    "choices": {
+                        "yes": "If you get hurt because of this study, the University of California will give you medical treatment that you need. You might have to pay for this treatment, or your insurance might pay for it. It depends on different things. The University or the study sponsor might pay for the medical costs instead. But usually, they don't pay for other things besides medical care if you get hurt. If you want to know more, call the office of the Institutional Review Board at 415-476-1814.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Alternative statement #1: If Sponsor requests MMSEA 111 Language",
+                    "choices": {
+                        "yes": "If you get hurt because of this study, the University of California will give you medical treatment that you need. You might have to pay for this treatment, or your insurance might pay for it. It depends on different things. The University or the study sponsor might pay for the medical costs instead. But usually, they don't pay for other things besides medical care if you get hurt. If the sponsor pays for these costs they will need to know some information. This can include your name, birthdate, and Medicare Health Insurance Claim Number or Social Security Number. This information will be used to check to see if you receive Medicare. If you receive Medicare, the sponsor will notify Medicare about the payment. The sponsor will not use this information for any other purpose. If you want to know more, call the office of the Institutional Review Board at 415-476-1814.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Alternative statement #2: If the study is of COVID-19 countermeasures that are covered by the [PREP Act Declaration](https://www.hrsa.gov/cicp)",
+                    "choices": {
+                        "yes": "If you get hurt because of this study, the University of California will give you medical treatment that you need. You might have to pay for this treatment, or your insurance might pay for it. It depends on different things. Due to the coronavirus public health crisis, the federal government issued a Declaration under the Public Readiness and Emergency Preparedness (PREP) Act. If the Declaration applies, it limits your right to sue and recover for losses from the researchers, healthcare providers, any study sponsor or manufacturer or distributor involved with the study, including the University of California, while participating in this COVID-19 clinical study. However, the federal government has a program that may provide compensation to you or your family for certain claims if you experience serious physical injuries or death and these costs are not covered by other payors. To find out more about this \u201cCountermeasures Injury Compensation Program\u201d go to https://www.hrsa.gov/cicp/about/index.html or call 1-855-266-2427. ",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Alternative statement #3: for SFVAHCS studies, or studies in which this consent form will be used at a VA site:",
+                    "choices": {
+                        "yes": "**Treatment and Compensation for Injury**: If you are having a medical emergency, call 9-1-1. If you get hurt or sick because of this study, the Department of Veterans Affairs (VA) give you medical treatment that you need. If you were following study instructions, the VA or the study sponsor will pay for the treatment. If you were NOT following study instructions, the costs of treatment might be billed to you or your insurer just like any other medical costs. It depends on different things. The VA and study sponsor usually do not pay for other things besides medical care if you get hurt. If you want to know more, call the study team at the number on page 1 of this form.",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Alternate statement #4: Use for studies where the Sponsor chooses to remain silent, and/or the Sponsor is the NIH",
+                    "choices": {
+                        "yes": "If you get hurt because of this study, the University of California will give you medical treatment that you need. You might have to pay for this treatment, or your insurance might pay for it. It depends on different things. The University might pay for the medical costs instead. But usually, they don't pay for other things besides medical care if you get hurt. If you want to know more, call the office of the Institutional Review Board at 415-476-1814. ",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "15. Are there any costs to me for taking part in this study?",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Choose 1 of the 3 options below. This is locked language and must not be altered. If your study includes the use of ANY clinical procedures (including the administration of drugs, devices, and/or tests), select statement option 1 or 2.</todo>",
+            "todo_list": [
+                {
+                    "question": "Option 1, for studies in which the Sponsor pays all costs",
+                    "choices": {
+                        "yes": "No. There is no cost to you or your insurer if you take part in this study. However, you may need to pay for items such as parking and transportation. \nYou or your insurer will be billed for the costs of any usual medical care you receive outside of this study. You will also be responsible for any deductibles or co-payments for these usual medical care costs. \n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Option 2, for studies in which participants may be responsible for some costs",
+                    "choices": {
+                        "yes": "Two types of tests or procedures will be done during this study. Some are part of your usual medical care and others are only for research. Any tests or procedures done only for research will not be charged to you or your insurer. You or your insurer will be billed for the usual medical care. You will be responsible for any costs your insurance does not cover. There is a possibility that your insurer may not cover all usual medical care costs if you are receiving medical services out of network. You or your insurer may be responsible to pay for all the types of items listed below: \n\n- Items and services that would have been provided to you even if you were not in the study\n- Health care given during the study as part of your regular care\n- Medical care you receive to diagnose or treat any medical condition(s) outside of this study\n- Routine items or services needed to give you study drugs or devices\n- Standard monitoring or treatment for side effects or other problems\n- Deductibles or co-pays for these items or services \n\nYou may need to pay for items such as parking and transportation. If you have questions about what costs you will be responsible for, please talk with the study investigator before deciding to enroll in the study. Depending on the type of study, some of your costs could be quite high. Ask to talk to someone about cost estimates if you aren\u2019t sure how much financial risk you might have. ",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Option 3, for studies with no costs",
+                    "choices": {
+                        "yes": "There will be no costs to you for being in this study.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "16. Can I stop being in the study if I want to?",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Choose 1 of the 3 options below. This is locked language and must not be altered. </todo>",
+            "todo_list": [
+                {
+                    "question": "Option 1: For greater than minimal risk studies (also called [Full Committee](https://irb.ucsf.edu/levels-review#full) studies)]",
+                    "choices": {
+                        "yes": "Yes. You can decide to stop at any time. If you are thinking about stopping, tell the study team so they can discuss any risks of stopping with you. They can tell you what follow-up care and testing could be most helpful. The study team will help you stop your participation safely.\n \nIf you stop being in the study, any data or specimens we have already collected will remain part of the study records. The study team may still get information from your medical records if it is important to the study. This information may include information like laboratory results, treatment courses, or health outcomes. If you do not want this information to be collected after you decide to stop being in the study, you must tell the study team. \n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Option 2: For [Expedited Review studies](https://irb.ucsf.edu/levels-review#expedited) that do NOT involve the collection of information from participant medical records:",
+                    "choices": {
+                        "yes": "Yes. You can decide to stop at any time. If you are thinking about stopping, tell the study team so they can discuss any risks of stopping with you. \n \nIf you stop being in the study, any data or specimens we have already collected will remain part of the study records.  \n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Option 3: For [Expedited Review studies](https://irb.ucsf.edu/levels-review#expedited) that DO involve the collection of information from participant medical records",
+                    "choices": {
+                        "yes": "Yes. You can decide to stop at any time. If you are thinking about stopping, tell the study team so they can discuss any risks of stopping with you. \n \nIf you stop being in the study, any data or specimens we have already collected will remain part of the study records. The study team may still get information from your medical records if it is important to the study. This information may include information like laboratory results, treatment courses, or health outcomes. If you do not want this information to be collected after you decide to stop being in the study, you must tell the study team.\n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "17. Can I be removed from the study by the Principal Investigator?",
+            "constant_section_flag": true,
+            "constant_text": "Yes. The Principal Investigator may stop you from taking part in this study at any time. This could happen without your permission. It could be because it is in your best interest, if you did not follow the study rules, or the study has been stopped."
+        },
+        {
+            "target_section": "18. What are my rights if I take part in this study?",
+            "constant_section_flag": true,
+            "constant_text": "You may choose to take part or not to take part in this study. It\u2019s your choice. If you decide to take part in this study, you may leave the study at any time. No matter what decision you make, there will be no penalty to you. Leaving the study will not affect your medical care. You can still get your medical care from our institution. \n\nWe will tell you about new information or changes in the study that may affect your health or your willingness to continue in the study.\n"
+        },
+        {
+            "target_section": "19. Who can answer my questions about this study?",
+            "constant_section_flag": true,
+            "constant_text": "You can contact the study team with any questions, concerns, or complaints you have about this study. The contact information is on the first page of this form.\n\nUCSF has an office that can answer questions about your rights as a research participant. This office is called the Institutional Review Board (IRB). The IRB is available to talk about any problems or concerns you have about the study. The UCSF IRB\u2019s phone number is 415-476-1814.",
+            "todo_list": [
+                {
+                    "question": "If there are additional informational sources related to the study (e.g., patient representatives or individuals at other study sites as appropriate)",
+                    "choices": {
+                        "yes": "<todo>If there are additional informational sources related to the study (e.g., patient representatives or individuals at other study sites as appropriate), you may list them after the standard statement, with contact information.</todo>",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "19.1 Where can I get more information about this study?",
+            "constant_section_flag": true,
+            "constant_text": "<todo>This section is required only for clinical trials that will be registered on clinicaltrials.gov.</todo>",
+            "todo_list": [
+                {
+                    "question": "If the NCT number has been assigned",
+                    "choices": {
+                        "yes": "A description of this clinical trial will be available on http://www.ClinicalTrials.gov, as required by U.S. Law.  This Web site will not include information that can identify you.  At most, the Web site will include a summary of the results.  You can search this Web site at any time. ",
+                        "no": "The National Clinical Trial (NCT) number for this study will be listed on the first page of this form. If the NCT number is not yet available, the study team will give it to you when it is available. "
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "20. Consent",
+            "constant_section_flag": true,
+            "constant_text": "\nYou will be given a copy of this form to keep. \n\n<todo>Review the guidance on the Experimental Subject's Bill of Rights (BOR) and determine if a BOR is needed for this study. If so, include this sentence: You will also be given the Experimental Subject's Bill of Rights to keep.</todo>\n\n<todo>If Protected Health Information as defined by HIPAA will be accessed, used, created, or disclosed, include this sentence: You will be asked to sign a separate form authorizing access, use, creation, or disclosure of health information about you.</todo>\n\nPARTICIPATION IN RESEARCH IS VOLUNTARY. You have the right to say \u201cNo\u201d to this study now or at any point without penalty.\n\nIf you wish to take part in this study, please sign below.\n\n______          ________________________________________\t\t\t\t\t\t\t\t\t\t\t\nDate\t\t\tParticipant's Signature for Consent\n\n______          ________________________________________\nDate\t\t\tPerson Obtaining Consent\n"
+        },
+        {
+            "target_section": "20.1 Donation of Human Fetal Tissue for Research Purposes",
+            "constant_section_flag": true,
+            "constant_text": "<todo>Only include if this study involves the collection of human fetal tissue from elective abortion for research purposes. Otherwise, delete this subsection.</todo>\n    \nFederally funded research studies that involve the use of human fetal tissue from elective abortion for research purposes require that you review the following statements and indicate whether they are true for you. Please read this information carefully and put your initials and date next to each statement that you agree with. \nIf you have any questions about any of these statements, please ask the study team:\n1.\tInformed consent for the donation of human fetal tissue for research purposes is being obtained by someone other than the person who obtained informed consent for the abortion; \nInitial:______  Date: __________   \n\n2.\tInformed consent for the donation of human fetal tissue for research purposes is occurring after the informed consent for abortion; \nInitial:______  Date: __________   \n\n3.\tThe informed consent obtained for the use of human fetal tissue for research purposes does not affect the method of abortion; and, additionally, no enticements, benefits, or financial incentives have been used at any level of the process to incentivize abortion or the donation of human fetal tissue for research purposes. \nInitial:______  Date: __________   \n"
+        },
+        {
+            "target_section": "21. Additional Optional Research",
+            "constant_section_flag": true,
+            "constant_text": "\n<todo>Insert information about optional studies here (or delete). Provide yes/no options at each decision point. Include another set of signature lines at the end, and have all lines signed and dated.</todo>\n\nPlease note: This section of the informed consent form is about optional research studies that are being done with people who are taking part in the main study. You may take part in these optional studies if you want to. You can still be a part of the main study even if you say \"no\" to taking part in any of these optional studies.\nYou can say \"yes\" or \"no\" to each of the following studies. Please mark your choice for each study.\n\n<todo>Insert the additional studies information here</todo>\n"
+        }
+    ]
+}

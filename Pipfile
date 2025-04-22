@@ -1,0 +1,44 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+pandas = "*"
+pydantic = "*"
+langchain = "*"
+tiktoken = "*"
+matplotlib = "*"
+plotly = "*"
+tabulate = "*"
+openai = "*"
+chromadb = "*"
+langchain-openai = "*"
+langchain-community = "*"
+seaborn = "*"
+langchain-google-community = "*"
+langchain-google-genai = "*"
+scikit-learn = "*"
+python-dotenv = "*"
+langchain-aws = "*"
+langchain-anthropic = "*"
+sympy = "*"
+tenacity = "*"
+langchain-core = "*"
+langchain-experimental = "*"
+langchain-together = "*"
+langchainhub = "*"
+numpy = "*"
+statsmodels = "*"
+ipython = "*"
+tqdm = "*"
+langgraph = "*"
+pyppeteer = "*"
+nest-asyncio = "*"
+
+[requires]
+python_version = "3.12"
+
+[dev-packages]
+ipykernel = "*"

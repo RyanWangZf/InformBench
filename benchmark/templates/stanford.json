@@ -1,0 +1,746 @@
+{
+    "template_name": "STANFORD CONSENT FORM with HIPAA Template ",
+    "template_version": "1.0",
+    "template_date": "03/2024",
+    "source": "https://researchcompliance.stanford.edu/panels/hs/forms-templates/medical",
+    "sections": [
+        {
+            "target_section": "Title",
+            "content_guidance": "Extract the title of the clinical trial from the provided context.",
+            "fallback_template_str": "Clinical Trial Informed Consent Form",
+            "retrieval_query": "Title of the clinical trial",
+            "constant_section_flag": false
+        },
+        {
+            "target_section": "Purpose of Research",
+            "content_guidance": "You are invited to participate in a research study of [*state what is being studied*].  We hope to learn [*state what the study is designed to discover or establish*].  You were selected as a possible participant in this study because [*state why the participant was selected*].\n\nThis research study is looking for [*state number of people in total across all institutes*] with [*disease or condition*].  [*Clarify if enrollment will occur throughout the United States or internationally*].  Our institute expects to enroll [*state number*] research study participants. \n\nDraft the concise summary in plain language based on the following points:\n\n\u2022\tThe fact that consent is being sought for research and that participation is voluntary; \n\u2022\tThe purpose(s) of the research, expected duration of the subject's participation, and the procedures to be followed in the research;\n\u2022\tReasonably foreseeable risks or discomforts;\n\u2022\tBenefits to subjects or others that may be reasonably expected from the research; and \n\u2022\tAppropriate alternative procedures or courses of treatment, if any that might be advantageous to the prospective subject. \n\n[*Other topics to consider*:\n\n\u2022\tMost important reason why a participant would and would not want to participate.\n\u2022\tHow will they feel during the study?\n\u2022\tWhat is the science?\n\u2022\tWhat's the difference between being in the study, and being treated for their condition?\n\u2022\tWill someone profit from the use of their samples or data?  Will they?\n\u2022\tWhat happens if they want to stop?\n\u2022\tHave other people taken this drug/used this device?  What happened to them?\n]",
+            "fallback_template_str": "You are invited to participate in a research study of <todo>state what is being studied</todo>.  We hope to learn state what the study is designed to discover or establish.  You were selected as a possible participant in this study because state why the participant was selected.\n\n#This research study is looking for <todo>state number of people</todo> with <todo>disease or condition</todo>.  <todo>Clarify if enrollment will occur throughout the United States or internationally</todo>.  This institute expects to enroll <todo>state number research study participants</todo>. \n\n- The fact that consent is being sought for research and that participation is voluntary; \n- The purpose(s) of the research, expected duration of the subject's participation, and the procedures to be followed in the research;\n- Reasonably foreseeable risks or discomforts;\n- Benefits to subjects or others that may be reasonably expected from the research; and \n- Appropriate alternative procedures or courses of treatment, if any that might be advantageous to the prospective subject. \n\nOther topics to consider:\n\n- Most important reason why a participant would and would not want to participate.\n- How will they feel during the study?\n- What is the science?\n- What's the difference between being in the study, and being treated for their condition?\n- Will someone profit from the use of their samples or data?  Will they?\n- What happens if they want to stop?\n- Have other people taken this drug/used this device?  What happened to them?",
+            "retrieval_query": "- Number of patients to be enrolled in the study.\n- The purpose(s) of the research, expected duration of the subject's participation, and the procedures to be followed in the research;\n- Reasonably foreseeable risks or discomforts;\n- Benefits to subjects or others that may be reasonably expected from the research; and \n- Appropriate alternative procedures or courses of treatment, if any that might be advantageous to the prospective subject. ",
+            "constant_section_flag": false,
+            "validation_rules": [
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1a",
+                    "rule_description": "A clear statement that the clinical investigation involves research is important to make prospective subjects aware that, although preliminary data (bench, animal, pilot studies, literature) may exist, the purpose of the subject's participation is primarily to contribute to research"
+                },
+                {
+                    "rule_name": "Additional 6. Number of Subjects: 6a",
+                    "rule_description": "When appropriate, the informed consent process must state the approximate number of subjects involved in the clinical investigation (21 CFR 50.25(b)(6))."
+                }
+            ]
+        },
+        {
+            "target_section": "Voluntary Participation",
+            "constant_text": "Your participation in this study is entirely voluntary.  Your decision not to participate will not have any negative effect on you or your medical care.  You can decide to participate now, but withdraw your consent later and stop being in the study without any loss of benefits or medical care to which you are entitled.",
+            "constant_section_flag": true,
+            "validation_rules": [
+                {
+                    "rule_name": "8. Voluntary Participation: 8a",
+                    "rule_description": "8a. Subjects must be informed that they may decline to take part in the clinical investigation or may stop participation at any time without penalty or loss of benefits to which subjects are entitled (21 CFR 50.25(a)(8)). Language that limits the subject's right to decline to participate or withdraw from the clinical investigation must not be used. "
+                },
+                {
+                    "rule_name": "8. Voluntary Participation: 8b",
+                    "rule_description": "Written withdrawal from the study by the subject is not a requirement. "
+                }
+            ]
+        },
+        {
+            "target_section": "Duration of Study Involvement",
+            "fallback_template_str": "This research study is expected to take approximately x days, weeks, months, etc. (e.g., this is a 2 year study; 28 days of active participation by each participant; and 180 days collection of information for each participant).\n- If there is a washout period, explain this in lay terms, including the length of time.\n- If there is a follow-up period, state so and the expected length of time.\n",
+            "retrieval_query": "\n        This research study is expected to take approximately x days, weeks, months, etc. (e.g., this is a 2 year study; 28 days of active participation by each participant; and 180 days collection of information for each participant).\n- If there is a washout period, explain this in lay terms, including the length of time.\n- If there is a follow-up period, state so and the expected length of time.\n",
+            "content_guidance": "This research study is expected to take approximately x days, weeks, months, etc. (e.g., this is a 2 year study; 28 days of active participation by each participant; and 180 days collection of information for each participant).\n- If there is a washout period, explain this in lay terms, including the length of time.\n- If there is a follow-up period, state so and the expected length of time.\n",
+            "constant_section_flag": false,
+            "validation_rules": [
+                {
+                    "rule_name": "Clinical Investigation Duration: 1h",
+                    "rule_description": "1h. The informed consent process must clearly describe the expected duration of the subject's participation in the clinical investigation (see 21 CFR 50.25(a)(1)), which includes their active participation as well as long-term follow-up, if appropriate."
+                },
+                {
+                    "rule_name": "Additional 4. Consequences of Subject's Decision to Withdraw: 4c",
+                    "rule_description": "Prospective subjects should be made aware of the number of visits and approximate time required for participation in the study to help them determine if they are able to make the commitment to complete the study. "
+                }
+            ],
+            "key_facts": [
+                {
+                    "fact_name": "Study total duration",
+                    "fact_type": "numerical",
+                    "fact_description": "The total duration of the study in days, weeks, months, etc."
+                },
+                {
+                    "fact_name": "Active participation duration",
+                    "fact_type": "numerical",
+                    "fact_description": "The duration of active participation by each participant in days, weeks, months, etc."
+                },
+                {
+                    "fact_name": "Follow-up period",
+                    "fact_type": "numerical",
+                    "fact_description": "The time duration of the follow-up period in days, weeks, months, etc."
+                },
+                {
+                    "fact_name": "Washout period",
+                    "fact_type": "numerical",
+                    "fact_description": "The time duration of the washout period in days, weeks, months, etc."
+                }
+            ]
+        },
+        {
+            "target_section": "Procedures",
+            "constant_section_flag": false,
+            "content_guidance": "\nIf you choose to participate, the Protocol Director and research study staff will <todo>describe all procedures to be followed. Consider inserting a simple chart or calendar; if using a schedule of events from a sponsor protocol, please use lay language within or define all acronyms. Diagrams can be very helpful to participants. Chronological descriptions are also helpful.  Be sure to use lay terminology throughout and define all medical terms. </todo>\nInclude the following, as applicable, in this section of the consent:\n\u25cf\tClearly identify what is experimental in this study.\n\u25cf\tState the purpose(s) of the procedures.  Suggestion: refer to your protocol to assist you in identifying all protocol-related procedures.\n\u25cf\tState how often each procedure will be done and how long it is expected to take.\n\u25cf\tIdentify invasive procedures, where applicable.\n\u25cf\tIf contraception is recommended, describe specifics for all participants. \n\u25cf\tFor labs and specimen collection: state what specimens will be obtained and the estimated frequency, volume, or size. The total volume should be calculated and presented to the participant in lay terms, e.g., the number of tablespoons of blood drawn.\n\nIn general, you should describe the procedures covering the following aspects:\n- screening procedures\n- treatment procedures\n- follow-up procedures\n- other procedures (e.g., sample collectiong, testing, etc.)",
+            "fallback_template_str": "If you choose to participate, the Protocol Director and research study staff will describe all procedures to be followed.  Consider inserting a simple chart or calendar; if using a schedule of events from a sponsor protocol, please use lay language within or define all acronyms.  Images and diagrams can be very helpful to participants.  Chronological descriptions are also helpful.  Be sure to use lay terminology throughout and define all medical terms. \n\nInclude the following, as applicable, in this section of the consent:\n- Clearly identify what is experimental in this study.\n- State the purpose(s) of the procedures.  Suggestion: refer to your protocol to assist you in identifying all protocol-related procedures.\n- State how often each procedure will be done and how long it is expected to take.\n- Identify invasive procedures, where applicable.\n- If contraception is recommended, describe specifics for all participants. \n- For labs and specimen collection: state what specimens will be obtained and the estimated frequency, volume, or size. The total volume should be calculated and presented to the participant in lay terms, e.g., the number of tablespoons of blood drawn.\n",
+            "constant_text": "\n\n\n**Future Use of Private Information and/or Specimens**\n\nResearch using private information and/or specimens is an important way to try to understand human disease.  You are being given this information because the investigators want to save private information and/or specimens for future research.\n\n",
+            "retrieval_query": "\n- Recruitment Procedures\n- schedule of assessment/treatment/activities\n- Treatment Procedures\n- Follow-Up Procedures\n- Randomization Procedures\n- Sample Collection and testing",
+            "key_facts": [
+                {
+                    "fact_name": "Pre-treatment test procedures",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of test procedures before the treatment procedures. For each, return the name, frequency, and duration."
+                },
+                {
+                    "fact_name": "Treatment procedures",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of treatment procedures. For each, return the name, frequency, and duration."
+                },
+                {
+                    "fact_name": "Follow-up procedures",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of follow-up procedures. For each, return the name, frequency, and duration."
+                },
+                {
+                    "fact_name": "Invastive procedures",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of names of treatments/tests that are invasive."
+                },
+                {
+                    "fact_name": "Specimen collection",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of specimens to be obtained, the estimated frequency, volume, or size."
+                },
+                {
+                    "fact_name": "Contraception",
+                    "fact_type": "bool",
+                    "fact_description": "Whether contraception is needed."
+                },
+                {
+                    "fact_name": "Genetic testing",
+                    "fact_type": "bool",
+                    "fact_description": "Whether future research on specimens will include genetic testing."
+                },
+                {
+                    "fact_name": "Whole genome sequencing",
+                    "fact_type": "bool",
+                    "fact_description": "Whether whole genome sequencing will occur."
+                },
+                {
+                    "fact_name": "Sharing research results",
+                    "fact_type": "bool",
+                    "fact_description": "Whether the results of the study will be shared with the participant."
+                },
+                {
+                    "fact_name": "MRI",
+                    "fact_type": "bool",
+                    "fact_description": "Whether MRI will be used in the study."
+                },
+                {
+                    "fact_name": "Unapproved devices",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of names of radio frequency coil, device, or software that has not been approved by the FDA."
+                }
+            ],
+            "validation_rules": [
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1c",
+                    "rule_description": "The description of the clinical investigation should identify tests or procedures required by the protocol that would not be part of their care outside of the research; for example, drawing blood samples for a pharmacokinetic study. Note that all experimental procedures must be identified as such (21 CFR 50.25(a)(1))."
+                },
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1d",
+                    "rule_description": "1d. Procedures related solely to research must be explained (for example, protocol-driven versus individualized dosing, randomized assignment to treatment, blinding of subject and investigator, and receipt of placebo if the study is placebo-controlled) (21 CFR 50.25(a)(1))."
+                },
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1e",
+                    "rule_description": "The description should include relevant information on what is known about both the test article (e.g., the investigational product under study)  and the control. For example, the description should indicate whether the test article is approved or cleared for marketing and describe the use(s) for which it has been approved or cleared. The description should also provide relevant information about any control used in the study: for example, whether the control is FDA-approved or cleared for marketing, considered a medically recognized standard of care, or is a placebo (including an explanation of what a placebo is)."
+                },
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1f",
+                    "rule_description": "The consent process should outline what the subject's participation will involve in order to comply with the protocol, for example, the number of clinic visits, maintenance of diaries, and medical or dietary restrictions (including the need to avoid specific medications or activities, such as participation in other clinical investigations)."
+                },
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1g",
+                    "rule_description": "1g. If there is follow-up period, prospective subjects must be informed of the procedures that will occur during such follow-up (21 CFR 50.25(a)(1))."
+                }
+            ],
+            "todo_list": [
+                {
+                    "question": "If collecting specimens",
+                    "choices": {
+                        "yes": "Your specimens will be stored <todo>insert how specimens will be stored - and if appropriate how specimens will be linked) e.g., under diagnosis and medical record or code number and unlinked.</todo>\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If specimens are unlinked",
+                    "choices": {
+                        "yes": "Because your specimens will not be linked to your name after they are stored, you cannot withdraw your consent to the use of the specimens after they are taken.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If speciments will be sent out of the institute for analysis",
+                    "choices": {
+                        "yes": "Your specimens will be sent to other institutions for analysis.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If specimens could be part of, or lead to the development of a commercially valuable product",
+                    "choices": {
+                        "yes": "Any of your specimens which are used in research may result in new products, tests or discoveries. In some instances, these may have potential commercial value and may be developed and owned by the Investigators, Stanford University and/or others.  However, donors of specimens do not retain any property rights to the materials.  Therefore, you would not share in any financial benefits from these products, tests or discoveries.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If future research on specimens will include genetic testing",
+                    "choices": {
+                        "yes": "**Genetic Testing and Future Research**\n\nAs part of the analysis on your specimens, the investigators <todo>may/will</todo> do genetic testing.  Genetic research is research that studies genes, including gene characteristics and gene versions that are transmitted by parents to children.  Genetic research may include looking at information, such as personal appearance and biochemistry, gene sequences, genetic landmarks, individual and family medical histories, reactions to medications and responses to treatment.  Genetic research raises certain questions about informing you of any results.  Possible risks of knowing results include:  anxiety; other psychological distress; and the possibility of insurance and job discrimination.  A possible risk of not knowing includes being unaware of the need for treatment.  These risks can change depending on the results of the research and whether there is a treatment or cure for a particular disease. \n\nSometimes patients have been required to furnish information from genetic testing for health insurance, life insurance, and/or a job.  A Federal law, the Genetic Information Nondiscrimination Act of 2008 (GINA), generally makes it illegal for health insurance companies, group health plans, and employers with 15 or more employees to discriminate against you based on your genetic information.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Whether or not whole genome sequencing will occur (include for all research involving specimens)",
+                    "choices": {
+                        "yes": "The process of determining all or nearly all of your DNA sequence is called whole genome sequencing. It is different from genetic testing that does not involve whole genome sequencing because it provides a much more detailed snapshot of your genome. This research <todo>will/might/will not</todo> include whole genome sequencing.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "name": "C7",
+                    "question": "If investigators will not share the research results with the participant",
+                    "choices": {
+                        "yes": [
+                            "The results of the study of your data and/or specimens from this project will be used for research purposes only, and you will not be told the results of the tests.\n\n",
+                            "You will be told the results of tests that are part of your clinical care, but you will not be told the results of the research tests, including any future research tests.\n\n"
+                        ],
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If investigators will allow participants to choose whether they want to receive test results and/or will contact participants in the future",
+                    "choices": {
+                        "yes": [
+                            "Regarding informing you of the test results, you should understand the following: \n\n- The information may be too limited to give you particular details or consequences; \n- You may be determined to carry a gene for a particular disease that can be treated;\n- You may be determined to carry a gene for a particular disease for which there is no current treatment; \n- You carry a gene for a disease and might consider informing relatives that they, too, might carry the gene.  \n\n",
+                            "Investigators in this study may try to re-contact you in the future. If you are re-contacted and want to know what the investigators have learned about your specimens, you should understand the following: \n\n-\tThe information may be too limited to give you particular details or consequences; \n-\tYou may be determined to carry a gene for a particular disease that can be treated;\n-\tYou may be determined to carry a gene for a particular disease for which there is no current treatment; \n-\tYou carry a gene for a disease and might consider informing relatives that they, too, might carry the gene.\n\n"
+                        ],
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the trial protocol uses MRI",
+                    "choices": {
+                        "yes": "**MRI (Magnetic Resonance Imaging)**\n\nMRI machines use a strong magnet and radiofrequency magnetic fields to make images of the body interior.  During the scan you will be asked to lie on a long narrow couch for a certain amount of time state how long while the machine gathers information.  During this time you will not be exposed to x-rays, but rather a strong magnetic field and radiofrequency magnetic fields, which you will not feel.  You will, however, hear repetitive tapping noises that arise from the Magnetic Resonance scanner.  We will provide earplugs or headphones that you will be required to wear.  The space within the large magnet in which you lie is somewhat confined, although we have taken steps to relieve the \"claustrophobic\" feeling.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the trial might use any radio frequency coil, device, or software that has not been approved by the Food and Drug Administration",
+                    "choices": {
+                        "yes": "Some of the radio frequency imaging coils, imaging software and devices being used in your scan are not approved by the FDA but are similar to counterparts that have been approved by the FDA.  There is a small risk of heating from the cables associated with these devices.  Please report any heating sensation immediately.\n            \n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the studies performed scan but is not a diagnostic study",
+                    "choices": {
+                        "yes": "The scans performed in this study are for specific research purposes and are not optimized to find medical abnormalities.  The investigators for this project may not be trained to perform medical diagnosis.  The investigators and Stanford are not responsible for failure to find existing abnormalities with these MRI scans.  However, on occasion the investigator may notice a finding on an MRI scan that seems abnormal.  When this occurs, a physician will be consulted as to whether the findings merit further investigation, in which case the investigator will contact you and your primary care physician and inform you of the finding.  The decision as to whether to proceed with further examination or treatment lies solely with you and your physician.  The investigators, the consulting physician, and Stanford are not responsible for any examination or treatment that you undertake based on these findings.  Because the images collected in this study may not comprise a proper clinical MRI scan, these images will not be made available for diagnostic purposes.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If people of childbearing potential (non-pregnant) will be enrolled in an investigational study",
+                    "choices": {
+                        "yes": "**People of Childbearing Potential**\n\nIf you are a person who is able to become pregnant, it is expected that you will use an effective method of birth control to prevent exposing a fetus to a potentially dangerous agent with unknown risk.  If you are pregnant or currently breast feeding, you may not participate in this study.  Please know that if you are pregnant, if you become pregnant, or if you are breast-feeding during this study, you or your child may be exposed to <todo>an unknown risk or state specific risk</todo>.\n\nTo confirm to the extent medically possible that you are not pregnant, you must have a pregnancy test done before beginning this research study.  You must agree to avoid sexual intercourse or use a birth control method judged to be effective by the investigator and which will not interfere with the proposed investigation.  You must accept the risk that pregnancy could still result despite the responsible use of reliable method of birth control.  You must notify the investigator as soon as possible of any failure of proper use of your birth control method, or if you become pregnant, either of which may result in your being withdrawn from the study.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If there are risks associated with causing a pregnancy",
+                    "choices": {
+                        "yes": "If you are participating in this study and you could cause your partner to become pregnant, you and your partner must use adequate contraception while you are participating in the study and for at least <todo>insert time after last dose of study drug, e.g., 12 weeks after taking your last dose of study medication.</todo>  Your doctor will discuss with you what methods of birth control are considered adequate.  You should inform your study doctor if your partner becomes pregnant.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study involves pregnancy testing and children",
+                    "choices": {
+                        "yes": "As part of this study, pregnancy testing will be performed. If you are a parent whose minor child is participating in this study, under most circumstances, California law does not permit us to disclose the result of your child\u2019s pregnancy test to you without a signed authorization from your child. If your child\u2019s pregnancy test comes back positive, results will be given to your child by one of the study nurses or doctors in private. Every effort will be made to maintain confidentiality regarding positive pregnancy test results. Circumstances, in which we might be compelled to reveal this information without authorization from you or your child include when your child's life or someone else's life is at risk or if abuse is suspected. If we believe it is legally necessary to tell a parent or guardian of a positive pregnancy test without your child's permission, we will meet with your child first in private to discuss our concerns before divulging any information regarding pregnancy. During research, if your child has a positive pregnancy test, we may withdraw your child from the study, but unless it is legally necessary or your child provides authorization, we will not be able to confirm that pregnancy is the reason for withdrawal. If your child becomes pregnant or if there is any chance that your child is pregnant (late menstrual period), please contact the study personnel immediately so that we may provide medical assistance and counseling.\n            \n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study is testing for communicable diseases (e.g., COVID-19, HIV) specifically for this research study",
+                    "choices": {
+                        "yes": "**Reportable Communicable Diseases (e.g., COVID-19, HIV)**\n\nYou will be tested for communicable diseases <todo>list which: COVID, HIV, etc.</todo> as part of this research study. If your test results are positive, the results will be reported to health authorities as required by law. \n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If testing for HIV",
+                    "choices": {
+                        "yes": "If you test positive for HIV, counseling will be provided.\n            \n            ",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the protocol involves gene transfer",
+                    "choices": {
+                        "yes": "**Gene Transfer Studies**\n\n<todo>The approximate number of people who have previously received the genetic material under the study.</todo>\n\n<todo>Explain the purpose and duration of long-term follow-up observations, the time intervals, the locations at which you plan to request the subjects to have scheduled study visits or be contacted by other means, and details as to what those contacts will involve.</todo>\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If there is any possibility that an autopsy may be requested (e.g., to test vector persistence, transgene expression, or related adverse reactions)",
+                    "choices": {
+                        "yes": "If you participate in this study, the research doctor may ask your family for permission to perform an autopsy if you pass away while the study is still in follow-up. An autopsy may help researchers learn more about <XYZ>. Because the decision about performing an autopsy would be up to your family, we encourage you to advise them of your wishes. Your family would not be responsible for the costs of the autopsy.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the protocol involves genetic information that will be deposited in NIH-supported repositories",
+                    "choices": {
+                        "yes": "**Genetic Information Sharing**\n\nInformation from analyses of your coded specimens and your coded information will be put into one of the National Institutes of Health (NIH) databases along with information from the other research participants and will be used for future research. These databases will be accessible by the Internet. Only anonymous information from the analyses will be put in a completely public database, available to anyone on the Internet. \n\nNo traditionally-used identifying information about you, such as your name, address, telephone number, or social security number, will be put into the public database. While the public database will not contain information that is traditionally used to identify you, people may develop ways in the future that would allow someone to link your genetic information in our databases back to you. For example, someone could compare information in our databases with information from you (or a blood relative) in another database and be able to identify you (or your blood relative). It also is possible that there could be \nviolations to the security of the computer systems used to store the codes linking your genetic information to you. \n\nHowever, your privacy is very important to us and we will use safety measures to protect it. Despite all of the safety measures that we will use, we cannot guarantee that your identity will never become known.\n\n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Participant Responsibilities",
+            "fallback_template_str": "As a participant, your responsibilities include: <todo>Choose applicable points; refer to your protocol to ensure participants know what is expected of them:</todo>\n\n- Follow the instructions of the Protocol Director and study staff.\n- Take the study drug as instructed <todo>if device, explain what is required for study compliance.</todo>\n- Keep your study appointments.  If it is necessary to miss an appointment, please contact the Protocol Director or research study staff to reschedule as soon as you know you will miss the appointment.\n- Tell the Protocol Director or research study staff about any side effects, doctor visits, or hospitalizations that you may have.\n- Tell the Protocol Director or research staff if you believe you or your partner might be pregnant.\n- Keep the study drug in a safe place, away from children and for your use only.\n- Keep your diaries as instructed.\n- Complete your questionnaires as instructed.\n- Ask questions as you think of them.\n- Tell the Protocol Director or research staff if you change your mind about staying in the study.\n",
+            "constant_section_flag": true,
+            "constant_text": "\n- Follow the instructions of the Protocol Director and study staff. \n",
+            "validation_rules": [
+                {
+                    "rule_name": "8. Voluntary Participation: 8a",
+                    "rule_description": "Subjects must be informed that they may decline to take part in the clinical investigation or may stop participation at any time without penalty or loss of benefits to which subjects are entitled (21 CFR 50.25(a)(8)). Language that limits the subject's right to decline to participate or withdraw from the clinical investigation must not be used. "
+                }
+            ],
+            "todo_list": [
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Take the study drug as instructed <todo>if device, explain what is required for study compliance.</todo>\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Keep your study appointments.  If it is necessary to miss an appointment, please contact the Protocol Director or research study staff to reschedule as soon as you know you will miss the appointment.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Tell the Protocol Director or research study staff about any side effects, doctor visits, or hospitalizations that you may have.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Tell the Protocol Director or research staff if you believe you or your partner might be pregnant.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Keep the study drug in a safe place, away from children and for your use only.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Keep your diaries as instructed.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Complete your questionnaires as instructed.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Ask questions as you think of them.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "Participant's responsibility",
+                    "choices": {
+                        "yes": "- Tell the Protocol Director or research staff if you change your mind about staying in the study.\n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Withdrawal from Study",
+            "content_guidance": "Clearly outline the study withdrawal procedures (Suggestion: check your protocol).\n\nIf you withdraw from the study, or the study medication is stopped for any reason, \n\u25cf\tadd anticipated consequences, if any, of discontinuing the study drug or device. \n\u25cf\tClearly state the protocol-specific termination procedures.  \n\u25cf\tInstruct participants that they must return all study-related supplies, including unused study drug.\n\nThe Protocol Director may also withdraw you from the study and the study medication may be stopped (if applicable), without your consent for one or more of the following reasons:  Note to investigator: check your protocol; you may use these reasons and/or add some of your own.\no\tFailure to follow the instructions of the Protocol Director and study staff.\no\tThe Protocol Director decides that continuing your participation could be harmful to you.\no\tPregnancy \no\tYou need treatment not allowed in the study.\no\tThe study is cancelled. \no\tOther administrative reasons.\no\tUnanticipated circumstances.\n",
+            "fallback_template_str": "\nIf you decide to withdraw your consent to participate in this study, you should notify name of PD at telephone number.\n\nClearly outline the study withdrawal procedures (Suggestion: check your protocol).\n\nIf you withdraw from the study, or the study medication is stopped for any reason, \n\u25cf\t<todo>add anticipated consequences, if any, of discontinuing the study drug or device. </todo>\n\u25cf\t<todo>Clearly state the protocol-specific termination procedures. </todo> \n\u25cf\t<todo>Instruct participants that they must return all study-related supplies, including unused study drug.</todo>\n\nThe Protocol Director may also withdraw you from the study <todo>and the study medication may be stopped (if applicable)</todo>, without your consent for one or more of the following reasons:  <todo>Note to investigator: check your protocol; you may use these reasons and/or add some of your own.</todo>\n- Failure to follow the instructions of the Protocol Director and study staff.\n- The Protocol Director decides that continuing your participation could be harmful to you.\n- Pregnancy \n- You need treatment not allowed in the study.\n- The study is cancelled. \n- Other administrative reasons.\n- Unanticipated circumstances.\n",
+            "constant_text": "\nIf you first agree to participate and then you change your mind, you are free to withdraw your consent and discontinue your participation at any time.  Your decision will not affect your ability to receive medical care for your disease and you will not lose any benefits to which you would otherwise be entitled. \n",
+            "validation_rules": [
+                {
+                    "rule_name": "Additional 2. Involuntary Termination of Subject's Participation: 2a",
+                    "rule_description": "When appropriate, the consent process must inform the subject of anticipated circumstances under which the investigator may end the subject's participation without the subject's consent (21 CFR 50.25(b)(2))."
+                },
+                {
+                    "rule_name": "Additional 4. Consequences of Subject's Decision to Withdraw: 4a",
+                    "rule_description": "4a. When withdrawal from a clinical investigation may adversely affect the subject, the informed consent process must explain the withdrawal procedures that are recommended in order to ensure the subject's safety and should specifically state why the withdrawal procedures are important to the subject's welfare.  The consent process must explicitly inform the subject of the potential adverse effects of premature termination of the investigational intervention."
+                },
+                {
+                    "rule_name": "Additional 4. Consequences of Subject's Decision to Withdraw: 4b",
+                    "rule_description": "4b. If applicable, the consent process must explain whether a subject who withdraws early will receive future study payments. The subject should also be informed as to how the data that have already been collected will be handled."
+                }
+            ],
+            "todo_list": [
+                {
+                    "question": "If FDA regulated, add the following:",
+                    "choices": {
+                        "yes": "\nData collected on you to the point of withdrawal remains part of the study database and may not be removed per the Food and Drug Administration.\n",
+                        "no": ""
+                    }
+                }
+            ],
+            "retrieval_query": "1. anticipated consequences, if any, of discontinuing the study drug or device.\n2. protocol-specific termination procedures.\n"
+        },
+        {
+            "target_section": "Possible Risks, Discomforts, and Inconveniences",
+            "content_guidance": "\n\u25cf\tDescribe the discomforts and inconveniences reasonably expected; include the inconvenience of travel.\n\u25cf\tIf there is a washout period, describe the risks of discontinuing medications.\n\u25cf\tDescribe any reasonably foreseeable risks - include for example\n    o\tPhysical risks - from study medications and procedures (e.g., venipuncture, exposure to radiation, allergic reaction when treatment includes medication)\n    o\tIf this is a placebo-controlled study, there may exist the risk that the disease/condition may go untreated and the subject\u2019s condition may worsen\n\u25cf\tInclude a statement that the particular treatment or procedure may involve risks to the subject, which are currently unforeseeable. \n",
+            "fallback_template_str": "There are risks, discomforts, and inconveniences associated with any research study.  These deserve careful thought.  You should talk with the Protocol Director if you have any questions.\n- Describe the discomforts and inconveniences reasonably expected; include the inconvenience of travel.\n- If there is a washout period, describe the risks of discontinuing medications.\n- Describe any reasonably foreseeable risks - include for example\n    - Physical risks - from study medications and procedures (e.g., venipuncture, exposure to radiation, allergic reaction when treatment includes medication)\n    - If this is a placebo-controlled study, there may exist the risk that the disease/condition may go untreated and the subject\u2019s condition may worsen\n- Include a statement that the particular treatment or procedure may involve risks to the subject, which are currently unforeseeable. \n\nRisks:\n\nMagnetic fields do not cause harmful effects at the levels used in the MRI machine.  However, the MR scanner uses a very strong magnet that will attract some metals and affect some electronic devices.  If you have a cardiac pacemaker or any other biomedical device in or on your body, it is very important that you tell the operator/investigator immediately.  As metallic objects may experience a strong attraction to the magnet, it is also very important that you notify the operator of any metal objects (especially surgical clips), devices, or implants that are in or on your body before entering the magnet room.  All such objects must be removed (if possible) before entering the magnet room.  In some cases, having those devices means you should not have an MRI scan performed, so it is very important that you notify the operator.  In addition, watches and credit cards should also be removed as these could be damaged.  You will be provided a way to secure these items.  If you have any history of head or eye injury involving metal fragments, if you have ever worked in a metal shop, or if you could be pregnant, you should notify the operator/investigator.  You should also notify the operator/investigator if you have any tattoos on your body, including eyeliner and other permanent makeup.  Tattoos could become warm and irritated during the scan and remain so for several days.  \n\nThere is a possibility that you will experience a localized twitching sensation due to the magnetic field changes during the scan. This is not unexpected and should not be painful.  However, you may have the scan stopped at any time if this occurs. There is also a possibility of tinnitus (ringing in the ears) after the MRI.\n\n<todo> If the study will use contrast media, insert the following:  </todo>\nIf you have had a previous reaction to Gadolinium-based contrast agents or a history of severe allergies, please notify the operator/investigator. If you have kidney problems, please tell the operator.\n\nIt has been observed that deposits of Gadolinium-based contrast agent (GBCA) remain in the brains of some people who undergo four or more contrast enhanced MRI scans, long after the last administration. It is not yet known whether these Gadolinium deposits are harmful or can lead to adverse health effects.  You should talk to the study doctor if you have any questions about the use of GBCAs with MRIs.\n\n<todo> If you are operating at 3.0T or above, include the following statement: </todo>\nDizziness or nausea may occur if you move your head rapidly within the magnet.\n\n* IF YOU FEEL DISCOMFORT AT ANY TIME, NOTIFY THE OPERATOR AND YOU CAN DISCONTINUE THE EXAM AT ANY TIME.\n    ",
+            "retrieval_query": "\n- Describe the discomforts and inconveniences reasonably expected; include the inconvenience of travel.\n- If there is a washout period, describe the risks of discontinuing medications.\n- What are the target conditions\n- Describe any reasonably foreseeable risks - include for example\n    - Physical risks - from study medications and procedures (e.g., venipuncture, exposure to radiation, allergic reaction when treatment includes medication\n    - If this is a placebo-controlled study, there may exist the risk that the disease/condition may go untreated and the subject's condition may worsen\n- Include a statement that the particular treatment or procedure may involve risks to the subject, which are currently unforeseeable. \n    ",
+            "constant_text": "\n\nThere are risks, discomforts, and inconveniences associated with any research study.  These deserve careful thought.  You should talk with the Protocol Director if you have any questions.\n\nIf you feel discomfort at any time, notify the operator and you can discontinue the exam at any time.\n\n",
+            "validation_rules": [
+                {
+                    "rule_name": "2. Risks and Discomforts: 2a",
+                    "rule_description": "The informed consent process must describe the reasonably foreseeable risks or discomforts to the subject. This includes risks or discomforts of tests, interventions and procedures required by the protocol (including protocol-specified standard medical procedures, exams, and tests), with a particular focus on those that carry significant risk of morbidity or mortality."
+                },
+                {
+                    "rule_name": "2. Risks and Discomforts: 2b",
+                    "rule_description": "Possible risks or discomforts due to changes to a subject's medical care (e.g., by changing the subject\u2019s stable medication regimen or by stopping the subject\u2019s current treatment and randomizing them to either the investigational drug or placebo) should be addressed."
+                },
+                {
+                    "rule_name": "2. Risks and Discomforts: 2c",
+                    "rule_description": "2c. Where relevant, participants should also be made aware of the possibility of unintended disclosures of private information and be provided with an explanation of measures to protect a subject's privacy and data, and limitations to those measures."
+                },
+                {
+                    "rule_name": "2. Risks and Discomforts: 2d",
+                    "rule_description": "2d. Reasonably foreseeable discomforts to the subject must also be described (21 CFR 50.25(a)(2)). For example, the consent form should disclose that the subject may be uncomfortable having to stay in one position or experience claustrophobia-like symptoms during an MRI."
+                },
+                {
+                    "rule_name": "2. Risks and Discomforts: 2e",
+                    "rule_description": "It is not necessary to describe all possible risks, especially if doing so could make the form overwhelming for subjects to read. Information on risks that are more likely to occur and those that are serious should be described so that prospective subjects can understand the nature of the risk. The discussion may include information on whether a risk is reversible, and the probability of the risk based on existing data. Information on what may be done to mitigate serious risks, and risks and discomforts more likely to occur, should also be considered for inclusion."
+                },
+                {
+                    "rule_name": "2. Risks and Discomforts: 2f",
+                    "rule_description": "If applicable, the consent document should include a description of the reasonably foreseeable risks to the subject, but also the potential for risk to \u201cothers\u201d (for example, radiation therapy where close proximity to subjects post-procedure may create some risk to others). In situations where there may be a risk to others, efforts to mitigate the potential risk (e.g., using separate bathrooms) may be included in the consent document."
+                },
+                {
+                    "rule_name": "2. Risks and Discomforts: 2g",
+                    "rule_description": "When appropriate, a statement must be included that a particular treatment or procedure may involve currently unforeseeable risks to the subject (or to the subject\u2019s embryo or fetus, if the subject is or may become pregnant) (21 CFR 50.25(b)(1)."
+                },
+                {
+                    "rule_name": "Additional 1. Unforeseeable Risks: 1a",
+                    "rule_description": "If long-term safety studies (such as bench and animal testing) are not completed, the informed consent process should explain that researchers have not completed studies that may identify potential risks (e.g., carcinogenicity or teratogenicity studies), and that there may be potential risks to subjects (or to the embryo or fetus, if the subject is or may become pregnant) that are currently unforeseeable (21 CFR 50.25(b)(1))."
+                },
+                {
+                    "rule_name": "Additional 1. Unforeseeable Risks: 1b",
+                    "rule_description": "Sponsors may want to consider whether appropriate birth control measures and notifying the investigator of pregnancy should be included in the protocol and addressed in the informed consent document."
+                }
+            ],
+            "key_facts": [
+                {
+                    "fact_name": "Treatment side effects",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of the name of side effects that can be caused by the treatments."
+                },
+                {
+                    "fact_name": "Test side effects",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of the name of side effects that can be caused by the tests conducted in the study."
+                },
+                {
+                    "fact_name": "Discontinuing medications",
+                    "fact_type": "list[str]",
+                    "fact_description": "List of the name of risks associated with discontinuing medications."
+                }
+            ],
+            "todo_list": [
+                {
+                    "question": "If study involves MRI",
+                    "choices": {
+                        "yes": "Magnetic fields do not cause harmful effects at the levels used in the MRI machine.  However, the MR scanner uses a very strong magnet that will attract some metals and affect some electronic devices.  If you have a cardiac pacemaker or any other biomedical device in or on your body, it is very important that you tell the operator/investigator immediately.  As metallic objects may experience a strong attraction to the magnet, it is also very important that you notify the operator of any metal objects (especially surgical clips), devices, or implants that are in or on your body before entering the magnet room.  All such objects must be removed (if possible) before entering the magnet room.  In some cases, having those devices means you should not have an MRI scan performed, so it is very important that you notify the operator.  In addition, watches and credit cards should also be removed as these could be damaged.  You will be provided a way to secure these items.  If you have any history of head or eye injury involving metal fragments, if you have ever worked in a metal shop, or if you could be pregnant, you should notify the operator/investigator.  You should also notify the operator/investigator if you have any tattoos on your body, including eyeliner and other permanent makeup.  Tattoos could become warm and irritated during the scan and remain so for several days.  \n\nThere is a possibility that you will experience a localized twitching sensation due to the magnetic field changes during the scan. This is not unexpected and should not be painful.  However, you may have the scan stopped at any time if this occurs. There is also a possibility of tinnitus (ringing in the ears) after the MRI.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study will use contrast media",
+                    "choices": {
+                        "yes": "If you have had a previous reaction to Gadolinium-based contrast agents or a history of severe allergies, please notify the operator/investigator. If you have kidney problems, please tell the operator.\n\nIt has been observed that deposits of Gadolinium-based contrast agent (GBCA) remain in the brains of some people who undergo four or more contrast enhanced MRI scans, long after the last administration. It is not yet known whether these Gadolinium deposits are harmful or can lead to adverse health effects.  You should talk to the study doctor if you have any questions about the use of GBCAs with MRIs.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If you are operating MRI at 3.0T or above",
+                    "choices": {
+                        "yes": "Dizziness or nausea may occur if you move your head rapidly within the magnet.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Potential Benefits",
+            "constant_section_flag": true,
+            "constant_text": "\n<todo>Describe any benefits that may be reasonably expected (key word-\u201creasonably\u201d).  If none can be expected, state so.</todo>\n\nWe cannot and do not guarantee or promise that you will receive any benefits from this study.",
+            "fallback_template_str": "\n<todo>Describe any benefits that may be reasonably expected (key word-\u201creasonably\u201d).  If none can be expected, state so.</todo>\n\nWe cannot and do not guarantee or promise that you will receive any benefits from this study.",
+            "validation_rules": [
+                {
+                    "rule_name": "3. Benefits: 3a",
+                    "rule_description": "The description of potential benefits to the subject from the use of the test article (and control, if appropriate) should include appropriate details, and should be clear, balanced, and based on reliable information to the extent such information is available. "
+                },
+                {
+                    "rule_name": "3. Benefits: 3b",
+                    "rule_description": "For clinical investigations involving the comparison of an investigational product to one or more standards of care, it is only necessary to generally describe the benefits of the standard of care in the informed consent form; there is no need to provide more specific information about the standard of care."
+                },
+                {
+                    "rule_name": "3. Benefits: 3c",
+                    "rule_description": "Requires a description of the potential benefits not only to the subject (for example, \u201cThis product is intended to decrease XXX; however, we cannot guarantee that you will receive any benefit from it or from being in the study.\u201d), but also to \u201cothers\u201d (for example, \u201cYour participation in this research may not benefit you, but information learned from this study may benefit patients with your disease or condition in the future.\u201d)."
+                },
+                {
+                    "rule_name": "3. Benefits: 3d",
+                    "rule_description": "3d. Overly optimistic representations of the benefits of the test article being studied in the clinical investigation may be misleading and may violate FDA regulations that prohibit promotion of investigational drugs and devices (21 CFR 312.7 and 21 CFR 812.7)."
+                },
+                {
+                    "rule_name": "3. Benefits: 3e",
+                    "rule_description": "Where the purpose of the study is to determine the safety and/or effectiveness of the test article, there is usually significant uncertainty regarding whether, and to what extent, the test article provides a benefit. If there is no potential for direct benefit to the prospective subject, which may be the case, for example, in a phase I study in healthy volunteers, this point should be clearly stated."
+                },
+                {
+                    "rule_name": "3. Benefits: 3f",
+                    "rule_description": "If payments, including reimbursement for research-related expenses incurred by subjects due to participation, are provided, the consent process should not identify them as benefits."
+                }
+            ]
+        },
+        {
+            "target_section": "Alternatives",
+            "content_guidance": "\n        Describe (in lay terms) the known appropriate alternative treatments/procedures that might be advantageous to the participant, and a statement that participants discuss the potential risks and benefits of the alternatives with a physician.\n- List any standard treatment that may be withheld during the study     . \n- If there is no alternative treatment state:       \nThe alternative is not to participate in this research study [you may also indicate that there may be alternate palliative treatments that are not curative (e.g., some cancer research), if applicable].\n",
+            "fallback_template_str": "\n<todo>#Describe (in lay terms) the known appropriate alternative treatments/procedures that might be advantageous to the participant, and a statement that participants discuss the potential risks and benefits of the alternatives with a physician.\n- List any standard treatment that may be withheld during the study\n- If there is no alternative treatment state: \nThe alternative is not to participate in this research study [you may also indicate that there may be alternate palliative treatments that are not curative (e.g., some cancer research), if applicable].</todo>",
+            "retrieval_query": "standard treatment that may be withheld during the study",
+            "validation_rules": [
+                {
+                    "rule_name": "1. Description of Clinical Investigation: 1b",
+                    "rule_description": "FDA recommends that when discussing the required elements of informed consent with prospective subjects, there should first be a discussion of the care a patient would likely receive if not part of the research, if relevant, and then the potential subject should be provided with information about the research."
+                },
+                {
+                    "rule_name": "4. Alternative Procedures or Treatments: 4a",
+                    "rule_description": "Prospective subjects must be informed of the appropriate alternatives available to them, including a description of the care they would be likely to receive if they choose not to participate in the research. This includes alternatives such as approved therapies for the patient\u2019s disease or condition, other forms of therapy (e.g., surgical) or diagnosis, and when appropriate, supportive care with no disease-directed therapy. This disclosure must include a description of the current medically recognized standard of care, particularly in studies of medical products intended to treat or diagnose serious diseases or conditions. "
+                },
+                {
+                    "rule_name": "4. Alternative Procedures or Treatments: 4b",
+                    "rule_description": "4b.  A full risk/benefit explanation of alternatives may not be appropriate to include in the written document."
+                }
+            ]
+        },
+        {
+            "target_section": "Participant's Rights",
+            "constant_section_flag": true,
+            "constant_text": "\nYou should not feel obligated to agree to participate.  Your questions should be answered clearly and to your satisfaction.  If you decide not to participate, tell the Protocol Director.  \n\nYou will be told of any important new information that is learned during the course of this research study, which might affect your condition or your willingness to continue participation in this study.\n",
+            "validation_rules": [
+                {
+                    "rule_name": "8. Voluntary Participation: 8a",
+                    "rule_description": "Subjects must be informed that they may decline to take part in the clinical investigation or may stop participation at any time without penalty or loss of benefits to which subjects are entitled (21 CFR 50.25(a)(8)). Language that limits the subject's right to decline to participate or withdraw from the clinical investigation must not be used. "
+                },
+                {
+                    "rule_name": "8. Voluntary Participation: 8b",
+                    "rule_description": "Written withdrawal from the study by the subject is not a requirement. "
+                },
+                {
+                    "rule_name": "Additional 5. Providing Significant New Findings to Subjects: 5a",
+                    "rule_description": "The consent process must, when appropriate, include a statement that significant new findings that may relate to the subject\u2019s willingness to continue participation, such as new risk information, will be provided to the subject (21 CFR 50.25(b)(5)). "
+                }
+            ]
+        },
+        {
+            "target_section": "ClinicalTrials.gov",
+            "constant_section_flag": true,
+            "todo_list": [
+                {
+                    "question": "Include the following language, if this study has been or will be registered on clinicaltrials.gov:",
+                    "choices": {
+                        "yes": "A description of this clinical trial will be available on http://www.ClinicalTrials.gov, as required by U.S. Law.  This Web site will not include information that can identify you.  At most, the Web site will include a summary of the results.  You can search this Web site at any time.",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Confidentiality",
+            "constant_section_flag": true,
+            "constant_text": "\nThe results of this research study may be presented at scientific or medical meetings or published in scientific journals.  Your identity and/or your personal health information will not be disclosed except as authorized by you or as required by law.  However, there is always some risk that even de-identified information might be re-identified. \n\nPatient information may be provided to Federal and other regulatory agencies as required.  The Food and Drug Administration (FDA), for example, may inspect research records and learn your identity if this study falls within its jurisdiction.\n",
+            "validation_rules": [
+                {
+                    "rule_name": "5. Confidentiality: 5a",
+                    "rule_description": "The consent process must describe the extent to which confidentiality of records identifying subjects will be maintained (21 CFR 50.25(a)(5)) and should identify all entities, for example, the study sponsor, the research team, regulatory agencies, and/or ethics committee members, who may gain access to the records relating to the clinical investigation."
+                },
+                {
+                    "rule_name": "5. Confidentiality: 5b",
+                    "rule_description": "The consent process must also note the possibility that FDA may inspect records (21 CFR 50.25(a)(5)) and should not state or imply that FDA needs permission from the subject for access to the records. Under the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule, FDA does not need permission to inspect records containing protected health information (45 CFR 164.512)."
+                }
+            ],
+            "todo_list": [
+                {
+                    "question": "If this study falls within the jurisdiction of the Food and Drug Administration.",
+                    "choices": {
+                        "yes": "The purpose of this research study is to obtain information on the safety and effectiveness of insert name of drug, device, etc.; the results will be provided to the sponsor, the Food and Drug Administration and other federal and regulatory agencies as required.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If this study is NIH funded.",
+                    "choices": {
+                        "yes": "**CERTIFICATE OF CONFIDENTIALITY**\n\nThis research is covered by a Certificate of Confidentiality from the National Institutes of Health. The researchers with this Certificate may not disclose or use information, documents, or specimens that may identify you in any federal, state, or local civil, criminal, administrative, legislative, or other action, suit, or proceeding, or be used as evidence, for example, if there is a court subpoena, unless you have consented for this use. Information, documents, or specimens protected by this Certificate cannot be disclosed to anyone else who is not connected with the research except, if there is a federal, state, or local law that requires disclosure (such as to report child abuse or communicable diseases but not for federal, state, or local civil, criminal, administrative, legislative, or other proceedings, see below); if you have consented to the disclosure, including for your medical treatment; or if it is used for other scientific research, as allowed by federal regulations protecting research subjects\n\nThe Certificate cannot be used to refuse a request for information from personnel of the United States federal or state government agency sponsoring the project that is needed for auditing or program evaluation by THE AGENCY which is funding this project or for information that must be disclosed in order to meet the requirements of the federal Food and Drug Administration (FDA).  You should understand that a Certificate of Confidentiality does not prevent you from voluntarily releasing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it.\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If researcher intends to disclose information covered by a Certificate, such as potential child abuse, or intent to hurt self or others in response to specific federal, state, or local laws.",
+                    "choices": {
+                        "yes": "The Certificate of Confidentiality will not be used to prevent disclosure as required by federal, state, or local law of <todo>list what will be reported, such as child abuse and neglect, or harm to self or others.</todo>\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If researcher intends to disclose information covered by a Certificate, with the consent of research participants.",
+                    "choices": {
+                        "yes": "The Certificate of Confidentiality will not be used to prevent disclosure for any purpose you have consented to in this informed consent document <todo>restate what will be disclosed, such as including research information in the medical record.</todo>\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the study is collecting PHI (any HIPAA identifiers along with Health Information), keep the following HIPAA authorization language.",
+                    "choices": {
+                        "yes": "## Authorization To Use Your Health Information For Research Purposes\n\nBecause information about you and your health is personal and private, it generally cannot be used in this research study without your written authorization.  If you sign this form, it will provide that authorization.  The form is intended to inform you about how your health information will be used or disclosed in the study.  Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law.  Please read it carefully before signing it.  \n\n**What is the purpose of this research study and how will my health information be utilized in the study?**\n\n<todo>Provide a description of the study, such as its purpose, and describe how the individual's health information will generally be used in the study, including any publication.  If this is a clinical trial, also explain that the information in some form will be submitted to the sponsor and the FDA.</todo>\n\n**Do I have to sign this authorization form?**\n\nYou do not have to sign this authorization form.  But if you do not, you will not be able to participate in this research study.  <todo>If the study includes any treatment, add: including receiving any research-related treatment</todo>.\n\nSigning the form is not a condition for receiving any medical care outside the study.\n\n**If I sign, can I revoke it or withdraw from the research later?**\n\nIf you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time.  After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research).  If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: <todo>researcher's name with mailing and/or email address.</todo>\n\n**What Personal Information Will Be Obtained, Used or Disclosed?**\nYour health information related to this study, may be used or disclosed in connection with this research study, including, but not limited to, <todo>List or describe the protected health (medical) information that will be collected in this study.  The information should be limited to the least amount of information needed to accomplish the purpose of the research (i.e., information relating to a particular medical condition, specific blood tests, specific physical examination measures, specific x-rays or MRI imaging information, including any reports such as radiology or pathology reports). Be sure that the information in this HIPAA authorization is consistent with sections 11b and 15a in the protocol application.</todo>\n\n**Who May Use or Disclose the Information?**\n\nThe following parties are authorized to use and/or disclose your health information in connection with this research study:\n- The Protocol Director <todo>insert Name of PD</todo>\n- The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary\n- Research Staff\n- <todo>If applicable, list any other persons or organizations that may use or disclose the participant's information in connection with this study.</todo>\n\n**Who May Receive or Use the Information?**\n\nThe parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: \n\n- The Office for Human Research Protections in the U.S. Department of Health and Human Services\n- Sponsor, funding agency or collaborators who may receive information\n- <todo> If the study is a clinical investigation involving a test article (drug, device, biologic) that is subject to FDA regulations, add: The Food and Drug Administration </todo>\n- <todo>List every other class of persons or organization not affiliated with the host institute -- e.g., a sponsor and affiliates, data safety monitoring board, collaborators at other institutions, outside data analysts, the National Institutes of Health, etc. -- to whom the participant's information might be disclosed.</todo>\n\nYour information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.\n\n**When will my authorization expire?**\n\n<todo>List a specific date on which the authorization will expire, e.g., \u201cwill end on December 31, 2050\u201d.  If you are uncertain, choose a date that provides plenty of time for your work to be completed (e.g., data analysis, monitoring, etc.).</todo>\n\nYour authorization for the use and/or disclosure of your health information will end on date or when the research project ends, whichever is earlier. \n\n**Will access to my medical record be limited during the study?**\n\nTo maintain the integrity of this research study, you may not have access to any health information developed as part of this study until it is completed.  At that point, you would have access to such health information if it was used to make a medical or billing decision about you (e.g., if included in your official medical record). \n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Financial Considerations",
+            "constant_section_flag": true,
+            "constant_text": "\n**Sponsor**\n\n<todo>Disclose what institution(s) -- e.g., NIH - or companies are involved in the study through funding, cooperative research, or by providing study drugs or equipment.  The following generic disclosure is acceptable:</todo>\n\n<todo>Name of institution/company</todo> is providing financial support and/or material for this study.      \n",
+            "validation_rules": [
+                {
+                    "rule_name": "Additional 3. Additional Costs to Subject: 3a",
+                    "rule_description": "3a. If subjects might incur additional expense as a result of taking part in the clinical investigation, the consent process must explain the added costs (21 CFR 50.25(b)(3))."
+                },
+                {
+                    "rule_name": "Additional 3. Additional Costs to Subject: 3b",
+                    "rule_description": "3b. Subjects should be made aware that insurance or other reimbursement mechanisms might not fund the medical care they receive as a result of participating in a clinical investigation even when the care is the standard care they would otherwise receive if not participating in a clinical investigation. If the subject\u2019s insurance is charged and there are deductibles or copayments, the subject should be informed of whether they will be responsible for these costs. If funds will be available to cover costs not covered by insurance or other forms of reimbursement, the consent form should describe how these funds will be made available to subjects or direct subjects on how to obtain further information. "
+                },
+                {
+                    "rule_name": "Additional 3. Additional Costs to Subject: 3c",
+                    "rule_description": "3c. In some cases, the cost of an investigational product may be charged to the subject. When these costs are passed to the subject, the consent process must identify these costs (21 CFR 50.25(b)(3))."
+                }
+            ],
+            "todo_list": [
+                {
+                    "question": "If the participant will be paid for participating in the research study.",
+                    "choices": {
+                        "yes": "**Payment**\n\n<todo>Include the amount of payment, if any, and the schedule of payment.  A statement of any anticipated prorated payments to the participant is required.</todo>\n\n<todo>If participants will be paid $200 or more, add the following:</todo>\nPayments may only be made to U.S. citizens, resident non-citizens, and those who are in a status that allows them to receive a taxable payment from a U.S. payer. You may need to provide your social security number to receive payment.                      \n",
+                        "no": "**Payment**\n\nYou will not be paid to participate in this research study.\n"
+                    }
+                },
+                {
+                    "question": "If participants will be reimbursed:",
+                    "choices": {
+                        "yes": "**Reimbursement**\n\n<todo>Include a statement on reimbursement (i.e., funds paid to participants to repay them for out-of-pocket expenses incurred as a result of participating in a study such as study-related travel, gas, non-business mileage (medical/move rate), lodging, and meals). Reimbursement payments must be based on actual incurred expenses and is not considered taxable income.</todo>\n\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If there is no treatment involved and there will be no additional costs to the participant due to their participation in the research",
+                    "choices": {
+                        "yes": "**Costs**\n\nThere is no cost to you for participating in this study, other than basic expenses like transportation and the personal time it will take to come to all of the study visits.\n",
+                        "no": "**Costs**\n\nIf you participate in this study, the study will pay for those services, supplies, procedures, and care associated with the study that are not a part of your routine medical care.  However, there may be additional costs to you.  These include basic expenses like transportation and the personal time it will take to come to the study visits.  You and/or your health insurance must pay for services, supplies, procedures, and care that are required during this study for routine medical care.  You will also be responsible for any co-payments and/or deductibles as required by your insurance.  Participation in this study is not a substitute for health insurance.  \n"
+                    }
+                },
+                {
+                    "question": "If consultative or financial relationships exist for the Protocol Director and/or any investigators in a study, disclose in a separate paragraph in the consent form the name and precise nature of the relationship",
+                    "choices": {
+                        "yes": "\n**Consultative or Financial Relationships**\n\nExamples: \nDr. Jane Doe is a paid consultant to <insert company name>, the company sponsoring this study.\nDr. Jane Doe receives honoraria from <insert company name>, the company sponsoring this study.\nDr. Jane Doe is paid speaking fees by <insert company name>, the company sponsoring this study.\nDr. Jane Doe receives payment for lectures from <insert company name>, the company sponsoring this study.\nDr. Jane Doe is a paid advisor to <insert company name>, the company sponsoring this study.\nDr. Jane Doe is an unpaid advisor to <insert company name>, the company sponsoring this study.\nDr. Jane Doe receives royalties from <insert company name>, the company sponsoring this study.\nDr. Jane Doe has an unpaid consulting relationship with <insert company name>, the company sponsoring this study.\nDr. Jane Doe is a member of the scientific advisory board for <insert company name>, the company sponsoring this study.\n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Compensation for Research-Related Injury",
+            "constant_section_flag": true,
+            "validation_rules": [
+                {
+                    "rule_name": "6. Compensation for Research-Related Injury: 6a",
+                    "rule_description": "6a. For clinical investigations involving more than minimal risk, the informed consent process must describe any compensation and medical treatments available to subjects if injury occurs (21 CFR 50.25(a)(6)). Because available compensation and medical treatments may vary depending on the medical circumstances of the individual subject or the policies of the institution, the consent process should include an explanation to subjects of where they may obtain further information. "
+                }
+            ],
+            "constant_text": "\n<todo>The informed consent form must include language on participant compensation in the event of a research-related injury.  Choose one of the two options below depending on the funding for the project.  No changes are permitted to this language.</todo>",
+            "todo_list": [
+                {
+                    "question": "If the industry sponsor or funder is paying for medical care costs incurred as a result of research-related injury:",
+                    "choices": {
+                        "yes": "\nAll forms of medical diagnosis and treatment - whether routine or experimental - involve some risk of injury.  In spite of all precautions, you might develop medical complications from participating in this study.  If such complications arise, the Protocol Director and the research study staff will assist you in obtaining appropriate medical treatment.  In the event that you have an injury or illness that is directly caused by your participation in this study, care will be provided to you.  You will not be responsible for any of these costs. \n\nIf you receive Medicare benefits, and if the sponsor of this study pays for any study-related treatment, complications or injuries, personal information about you, your treatment, and your participation in this study will be provided to the sponsor, who is required by law to provide it to Medicare.\n\nYou do not waive any liability rights for personal injury by signing this form.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If the studies involving COVID-19 research.",
+                    "choices": {
+                        "yes": "The federal government has issued a Declaration that may limit your right to sue if you are injured or harmed while participating in this COVID-19 study. If the Declaration applies, it limits your right to sue researchers, healthcare providers, any study sponsor, manufacturer, distributor or any other official involved with the study. However, the federal government has a program that may provide compensation to you or your family if you experience serious physical injuries or death. To find out more about this \u201cCountermeasures Injury Compensation Program\u201d please go to https://www.hrsa.gov/cicp/about/index.html or call 1-855-266-2427.\n",
+                        "no": ""
+                    }
+                },
+                {
+                    "question": "If\nA. Projects with federal funding (i.e., NIH funding), Stanford Departmental funding, gift funding, medical scholars funding and projects with pilot or other internal funding;\n OR \n B.\tIndustry funded projects when the industry funder/sponsor is not paying for medical care costs incurred as a result of research-related injury.",
+                    "choices": {
+                        "yes": "All forms of medical diagnosis and treatment \u2013 whether routine or experimental \u2013 involve some risk of injury.  In spite of all precautions, you might develop medical complications from participating in this study.  If such complications arise, the Protocol Director and the research study staff will assist you in obtaining appropriate medical treatment.  In the event that you have an injury or illness that is directly caused by your participation in this study, reimbursement for all related costs of care first will be sought from your insurer, managed care plan, or other benefits program.  You will be responsible for any associated co-payments or deductibles as required by your insurance.\n\nIf costs of care related to such an injury are not covered by your insurer, managed care plan or other benefits program, you may be responsible for these costs.  If you are unable to pay for such costs, the Protocol Director will assist you in applying for supplemental benefits and explain how to apply for patient financial assistance from the hospital.\n\nYou do not waive any liability rights for personal injury by signing this form.\n",
+                        "no": ""
+                    }
+                }
+            ]
+        },
+        {
+            "target_section": "Contact Information",
+            "constant_section_flag": true,
+            "validation_rules": [
+                {
+                    "rule_name": "7. Contacts: 7a",
+                    "rule_description": "7a. The consent document (or oral presentation, if a short form is used) must provide information on how to contact an appropriate individual for questions about the clinical investigation and the subjects\u2019 rights, and whom to contact in the event that a research-related injury to the subject occurs (21 CFR 50.25(a)(7)). This information should include contact names (or offices), email addresses, and their telephone numbers."
+                },
+                {
+                    "rule_name": "7. Contacts: 7b",
+                    "rule_description": "7b.  The consent process should include information on whom to contact and what to do in the event of an emergency, including 24-hour contact information, if appropriate"
+                }
+            ],
+            "constant_text": "\nQuestions, Concerns, or Complaints:  If you have any questions, concerns or complaints about this research study, its procedures, risks and benefits, or alternative courses of treatment, you should ask the Protocol Director, <todo>name of Protocol Director</todo>. You may contact them now or later at <todo>Protocol Director\u2019s phone number</todo>. \n\nInjury Notification:  If you feel you have been hurt by being a part of this study, please contact the Protocol Director, <todo>name of Protocol Director</todo> at <todo>Protocol Director\u2019s phone number</todo>. \n\nIndependent Contact:  If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 1705 El Camino Real, Palo Alto, CA 94306.\n"
+        },
+        {
+            "target_section": "Experimental Subject's Bill of Rights",
+            "constant_section_flag": true,
+            "constant_text": "\nAs a research participant you have the following rights.  These rights include but are not limited to the participant's right to:\n\n- be informed of the nature and purpose of the experiment; \n- be given an explanation of the procedures to be followed in the medical experiment, and any drug or device to be utilized; \n- be given a description of any attendant discomforts and risks reasonably to be expected; \n- be given an explanation of any benefits to the subject reasonably to be expected, if applicable; \n- be given a disclosure of any appropriate alternatives, drugs or devices that might be advantageous to the subject, their relative risks and benefits;\n- be informed of the avenues of medical treatment, if any available to the subject after the experiment if complications should arise; \n- be given an opportunity to ask questions concerning the experiment or the procedures involved; \n- be instructed that consent to participate in the medical experiment may be withdrawn at any time and the subject may discontinue participation without prejudice; \n- be given a copy of the signed and dated consent form; and \n- be given the opportunity to decide to consent or not to consent to a medical experiment without the intervention of any element of force, fraud, deceit, duress, coercion or undue influence on the subject's decision.\n    "
+        }
+    ]
+}
