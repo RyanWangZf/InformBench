@@ -36,6 +36,7 @@ tqdm = "*"
 langgraph = "*"
 pyppeteer = "*"
 nest-asyncio = "*"
+pymupdf4llm = "*"
 
 [requires]
 python_version = "3.12"

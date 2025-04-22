@@ -30,7 +30,10 @@ def call_llm_json_output(
         api_key=os.environ.get("AZURE_OPENAI_API_KEY"),
         api_version="2024-12-01-preview",
         temperature=temperature,
-        model_kwargs={"max_completion_tokens": max_completion_tokens}
+        model_kwargs={
+            "max_completion_tokens": max_completion_tokens, 
+            "response_format": {"type": "json_object"}
+        }
     )
     
     # Add JSON formatting instructions to the prompt
